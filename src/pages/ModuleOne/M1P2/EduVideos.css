@@ -1,0 +1,103 @@
+/* Horizontal line at the top of the educational videos section */
+.educational-videos-line {
+  width: 100vw; /* Full viewport width */
+  height: 2px; /* Line thickness */
+  background-color: #ececec; /* Light grey colour */
+  margin-left: calc(-50vw + 50%); /* Centers the line relative to the viewport */
+}
+
+/* Main container for educational videos */
+.educational-videos {
+  max-width: 960px; /* Limits the width for readability */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 100px 20px; /* Top and bottom padding */
+}
+
+/* Styles for individual video containers */
+.educational-videos__container {
+  background: #ffffff; /* White background for cleanliness */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  overflow: hidden; /* Hides anything outside the border radius */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-top: 2rem; /* Space above each video container */
+  transition: transform 0.3s ease; /* Smooth transform on interaction */
+}
+
+/* Hover effects for video containers */
+.educational-videos__container:hover {
+  transform: translateY(-5px); /* Moves container up slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increases shadow for emphasis */
+}
+
+/* Main title styles */
+.educational-videos__main-title {
+  text-align: center; /* Centers the title */
+  font-size: 2em; /* Larger font size for emphasis */
+  color: #030F28; /* Dark blue colour for contrast */
+  padding: 20px 0; /* Padding above and below the title */
+  margin-bottom: 1rem; /* Space below the title */
+  position: relative; /* Required for positioning pseudo-elements */
+  display: inline-block; /* Limits width to content size */
+}
+
+/* Decorative underline for the main title */
+.educational-videos__main-title::after {
+  content: ''; /* Required for display */
+  display: block; /* Block display type */
+  width: 100%; /* Full width of the title */
+  height: 3px; /* Thickness of the line */
+  background-color: #5EC3E5; /* Bright blue for visual appeal */
+  margin-top: 8px; /* Space between the title and underline */
+}
+
+/* Title styles for individual videos */
+.educational-videos__title {
+  background-color: #030F28; /* Dark blue background */
+  color: #ffffff; /* White text for contrast */
+  text-align: center; /* Centers the text */
+  padding: 16px 0; /* Padding above and below the text */
+  margin: 0; /* No margin to fit tightly within its container */
+  font-size: 1.5em; /* Moderate size for readability */
+}
+
+/* Styling for the video iframe */
+.educational-videos__frame {
+  width: 100%; /* Full width to expand to container size */
+  height: 315px; /* Fixed height for uniformity */
+  border: none; /* No border for a clean look */
+}
+
+/* List styling within video containers */
+.educational-videos__points {
+  list-style: none; /* No bullet points */
+  padding: 20px; /* Padding around the list */
+  margin: 0; /* No margin for alignment with container edges */
+}
+
+/* Styles for individual list items */
+.educational-videos__point-item {
+  color: #030F28; /* Dark blue text for readability */
+  background-color: #ffffff; /* White background for clarity */
+  padding: 0.75rem 1rem; /* Padding within each list item */
+  border-left: 3px solid #5EC3E5; /* Decorative left border */
+  margin-bottom: 0.5rem; /* Space between list items */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Hover effect for list items */
+.educational-videos__point-item:hover {
+  background-color: #5EC3E5; /* Change background colour on hover */
+  transform: translateX(10px); /* Shifts the item rightwards */
+}
+
+/* Responsive design adjustments for smaller screens */
+@media (max-width: 768px) {
+  .educational-videos__frame {
+      height: auto; /* Automatic height to maintain aspect ratio */
+      aspect-ratio: 16 / 9; /* Keeps the video aspect ratio consistent */
+  }
+
+  .educational-videos__title {
+      font-size: 1.2em; /* Smaller font size for smaller screens */
+  }
+}

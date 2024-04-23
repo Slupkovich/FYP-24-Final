@@ -1,0 +1,182 @@
+/* Main styles for the feedback section */
+.feedback-section-M1 {
+    background: #030F28; /* Dark background for contrast with white text */
+    color: #ffffff; /* White text for readability */
+    padding: 40px; /* Spacing inside the section */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers children horizontally */
+    justify-content: center; /* Centers children vertically */
+    gap: 32px; /* Space between children elements */
+    margin: 40px auto; /* Margin for top, bottom and auto-margins horizontally to center the section */
+    width: 80%; /* Sets the width relative to the viewport or parent container */
+}
+
+/* Container for the text content within the feedback section */
+.feedback-container-M1 {
+    max-width: 800px; /* Limits the width of the content for readability */
+    text-align: center; /* Centers the text */
+}
+
+/* Styles for the main title within the feedback container */
+.feedback-container-M1 h1 {
+    color: #ffffff; /* White colour for the title for contrast */
+    font-size: 48px; /* Large font size for emphasis */
+    margin-bottom: 24px; /* Spacing below the title */
+    position: relative; /* Allows for absolute positioning of pseudo-elements */
+}
+
+/* Creates an underline effect for the title */
+.feedback-container-M1 h1::after {
+    content: ''; /* Necessary for generated content */
+    display: block; /* Treats the pseudo-element as a block */
+    width: 100%; /* Ensures the underline spans the full width of the title */
+    height: 3px; /* Thickness of the underline */
+    background: #5EC3E5; /* Bright blue for visual interest */
+    margin-top: 8px; /* Spacing above the underline */
+    position: absolute; /* Positions relative to the title */
+    left: 0;
+    bottom: -10px; /* Positions the underline below the title */
+}
+
+/* Paragraph styles for descriptive text within the feedback container */
+.feedback-container-M1 p {
+    font-size: 18px; /* Readable text size */
+    line-height: 1.6; /* Line height for improved readability */
+    margin-bottom: 32px; /* Spacing below the paragraph */
+}
+
+/* Styles for the 'Return' and 'Continue Learning' buttons */
+.feedback-button--return-M1, .feedback-button--continue-M1 {
+    padding: 15px 30px; /* Padding for size and comfort of interaction */
+    border: none; /* No border for a clean look */
+    border-radius: 30px; /* Rounded corners for a friendly appearance */
+    font-weight: 600; /* Bold text for legibility */
+    font-size: 18px; /* Font size for clarity */
+    cursor: pointer; /* Cursor changes to indicate interactivity */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for interactivity */
+    margin: 0 10px; /* Horizontal spacing between buttons */
+}
+
+/* Unique styles for the 'Give Feedback' button with a gradient background */
+.feedback-button-M1 {
+    background: linear-gradient(180deg, #63d3f5, #41a7e0); /* Gradient background for visual appeal */
+    color: white; /* White text for contrast */
+    border: 1px solid #4db2d6; /* Subtle border matching the gradient */
+    padding: 15px 30px; /* Padding for size and comfort */
+    font-size: 1.1rem; /* Slightly larger font size */
+    border-radius: 50px; /* Pill-shaped button for a modern look */
+    cursor: pointer; /* Cursor changes to indicate interactivity */
+    transition: all 0.3s ease; /* Smooth transitions for hover and focus effects */
+    display: block; /* Block display to take up its own line */
+    margin-left: auto; /* Margins for centering the button horizontally */
+    margin-right: auto;
+}
+
+/* Hover and focus styles for the 'Give Feedback' button */
+.feedback-button-M1:hover,
+.feedback-button-M1:focus {
+  background: linear-gradient(360deg, #5EC3E5, #3a9ec2); /* Adjusted gradient for hover/focus state */
+  box-shadow: 0px 8px 20px rgba(77, 178, 214, 0.5); /* Shadow for depth */
+  transform: translateY(-2px) scale(1.02); /* Slight lift and scale for interactivity */
+  outline: none; /* Removes default focus outline for custom styling */
+}
+
+.feedback-button--continue-M1, .feedback-button--return-M1 {
+    background-color: #ffffff;
+    color: #030F28;
+    border: 2px solid #5EC3E5;
+}
+
+/* Continued and Return button styles for hover state */
+.feedback-button--continue-M1:hover, .feedback-button--return-M1:hover {
+    background-color: #f0f0f0; /* Light grey background for hover state */
+    transform: translateY(-3px); /* Slight lift for interactive effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 16px; /* Adjust this value as needed for spacing between buttons */
+}
+
+.button-group .feedback-button-single {
+    width: 50%; /* Adjust this value for desired width */
+    max-width: 300px; /* Adjust this value for maximum width */
+}
+
+.button-group .feedback-button-pair {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    gap: 16px; /* Adjust this value as needed for spacing between buttons */
+}
+
+.feedback-button--return-M1, .feedback-button--continue-M1 {
+    flex: 1; /* This will make both buttons expand equally */
+    max-width: 300px; /* Adjust this value for maximum width */
+}
+
+/* Responsive adjustments for tablets and smaller devices */
+@media (max-width: 1024px) {
+    /* Adjusts the feedback section to occupy more of the viewport width for better use of space */
+    .feedback-section-M1 {
+        width: 90%;
+        margin: 20px auto; /* Reduces vertical margin and auto centers */
+        padding: 20px; /* Reduces padding for a tighter layout */
+    }
+
+    /* Limits the maximum width of the feedback container to enhance readability */
+    .feedback-container-M1 {
+        max-width: 90%; /* Allows for some margin on the sides */
+    }
+
+    /* Adjusts button font size and padding for better fit and readability */
+    .feedback-button-M1, .feedback-button--continue-M1, .feedback-button--return-M1 {
+        font-size: 16px; /* Slightly smaller font size */
+        padding: 12px 20px; /* Reduced padding for a more compact look */
+    }
+}
+
+/* Responsive design adjustments for screens with a max-width of 768px, targeting tablets and mobile devices. */
+@media (max-width: 768px) {
+    /* Adjusts the font size of the main title within the feedback container for improved readability on smaller screens. */
+    .feedback-container-M1 h1 {
+        font-size: 36px; /* Reduces the font size from its original size to fit smaller screens better. */
+    }
+
+    /* Modifies the paragraph font size within the feedback container to ensure text remains legible without taking up excessive space. */
+    .feedback-container-M1 p {
+        font-size: 16px; /* Slightly decreases the font size for a balanced appearance on smaller screens. */
+    }
+
+    /* Styles for single feedback buttons and navigational buttons ('Return' and 'Continue') within the button group. */
+    .button-group .feedback-button-single, 
+    .feedback-button--return-M1, 
+    .feedback-button--continue-M1 {
+        width: 100%; /* Sets the buttons to occupy the full width of their container, enhancing tap targets on touch screens. */
+    }
+
+    /* Adjusts the layout of button pairs within the button group to stack vertically, improving usability on narrow screens. */
+    .button-group .feedback-button-pair {
+        flex-direction: column; /* Changes the flex direction to stack buttons vertically, aiding in finger-friendly navigation. */
+    }
+
+    /* Ensures all feedback buttons, including the main feedback button and navigation buttons, span the full width of the container. */
+    .feedback-button-M1, 
+    .feedback-button--continue-M1, 
+    .feedback-button--return-M1 {
+        width: calc(100% - 20px); /* Calculates the width to be the full container width minus padding, for a balanced look. */
+        margin: 10px 0; /* Adds vertical spacing between buttons for clear separation and easier interaction. */
+    }
+
+    /* Specific adjustment for the 'Give Feedback' button to ensure consistent alignment when stacked with other buttons. */
+    .feedback-button-M1 {
+        margin-right: 0; /* Removes the right margin, aiding in consistent alignment within the button group when stacked. */
+    }
+}
+

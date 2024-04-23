@@ -1,0 +1,78 @@
+/* Container for the entire NotFound component */
+.not-found-container {
+  display: flex; /* Uses flexbox to center and align items vertically */
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Horizontally centers the content */
+  flex-direction: column; /* Stacks children vertically */
+  height: 100vh; /* Full viewport height to ensure it covers the whole screen */
+  background-color: #030F28; /* Very dark blue background for contrast */
+  color: #ffffff; /* White text for high visibility against dark background */
+  padding: 2% 5%; /* Padding to ensure content doesn't touch the edges */
+}
+
+/* Styling for the error image displayed */
+.error-image {
+  max-width: 80%; /* Limits the width to 80% of its container */
+  max-height: 60vh; /* Limits the height to 60% of the viewport height */
+  margin-top: -30vh; /* Negative margin to pull the image upwards */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+/* Container for the textual content of the error page */
+.text-content {
+  text-align: center; /* Centers the text horizontally */
+  padding: 0 15px; /* Horizontal padding to prevent text from touching the container edges */
+}
+
+/* Styling for the main title of the NotFound page */
+.title {
+  font-size: 2.5rem; /* Large font size for visibility */
+  margin-bottom: 0.5rem; /* Space below the title */
+  color: #5EC3E5; /* Bright sky blue color to stand out */
+}
+
+/* Styling for the tagline under the title */
+.tagline {
+  font-size: 1.2rem; /* Smaller than the title for hierarchy */
+  margin-bottom: 1.5rem; /* Space below the tagline */
+  opacity: 0.9; /* Slightly reduced opacity for aesthetic reasons */
+}
+
+/* Styling for the home button to navigate back to the homepage */
+.home-button {
+  text-transform: uppercase; /* UPPERCASE text for emphasis */
+  padding: 10px 30px; /* Adequate padding for clickable area */
+  border: none; /* No border for a cleaner look */
+  background-color: #5EC3E5; /* Matching the title color for design consistency */
+  color: #ffffff; /* White text for contrast */
+  border-radius: 5px; /* Rounded corners for a softer look */
+  text-decoration: none; /* No underline on the text */
+  font-weight: bold; /* Bold text for emphasis */
+  letter-spacing: 1px; /* Spacing between letters for better readability */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions for interactive effects */
+}
+
+/* Hover effects for the home button */
+.home-button:hover {
+  background-color: #4db2d6; /* Slightly darker blue on hover */
+  transform: translateY(-3px); /* Lifts the button slightly for a dynamic effect */
+}
+
+/* Responsive adjustments for smaller screen devices */
+@media (max-width: 768px) {
+  .error-image {
+      max-width: 95%; /* Larger image to use more screen space */
+  }
+
+  .title {
+      font-size: 2rem; /* Smaller font size to fit smaller screens */
+  }
+
+  .tagline {
+      font-size: 1rem; /* Smaller font size for smaller devices */
+  }
+
+  .home-button {
+      padding: 8px 25px; /* Slightly smaller padding to fit smaller screens */
+  }
+}

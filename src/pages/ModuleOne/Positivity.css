@@ -1,0 +1,78 @@
+/* Styling for the main positivity section */
+.positivity {
+    width: 100%; /* Full width of the container */
+    background: #ffffff; /* White background for clarity and focus */
+    border-top: 2px solid #ececec; /* Light grey border at the top for a subtle separation */
+    display: flex; /* Utilises Flexbox for layout */
+    flex-direction: column; /* Stacks child elements vertically */
+    align-items: center; /* Centers child elements horizontally */
+    padding: 100px 40px; /* Ample padding for visual space around the content */
+    margin: 0 auto; /* Centers the section in the page */
+    box-sizing: border-box; /* Ensures padding does not add to the total width */
+}
+
+/* Styling for the container box holding all content */
+.positivity__content-box {
+    background-color: #ffffff; /* White background for a clean appearance */
+    border-radius: 8px; /* Rounded corners for a softer, modern look */
+    max-width: 800px; /* Maximum width to ensure content is readable */
+}
+
+/* Shared styles for the different sections within the positivity content */
+.positivity__inspirational-quotes,
+.positivity__visual-inspiration,
+.positivity__affirmations {
+    background-color: #ffffff; /* Consistent white background across sections */
+    border-radius: 8px; /* Rounded corners for uniformity */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); Optional box shadow for depth, currently commented out */
+    text-align: center; /* Center-aligns text for a harmonious layout */
+}
+
+/* Styling for headings in each section */
+.positivity__heading {
+    color:#030F28; /* Dark blue color for contrast and focus */
+    margin-bottom: 20px; /* Space below headings to separate from content */
+    position: relative; /* Establishes a positioning context for the pseudo-element */
+    text-align: center; /* Ensures text is centered */
+}
+
+/* Adds a decorative line below the headings */
+.positivity__heading::after {
+    content: ''; /* Necessary for the pseudo-element to display */
+    display: block; /* Treats the element as a block */
+    width: 100%; /* Full width to align with the heading */
+    height: 3px; /* Thickness of the line */
+    background-color: #5EC3E5; /* Light blue for a pop of color */
+    margin: 0 auto; /* Centers the line horizontally */
+    margin-top: 8px; /* Space between the heading and the line */
+}
+
+/* Styling for the quotes within the inspirational quotes section */
+.positivity__quotes .positivity__quote {
+    color: #030F28; /* Dark blue for readability */
+    line-height: 1.6; /* Increased line-height for better readability */
+    margin-bottom: 15px; /* Space between quotes */
+    font-style: italic; /* Italicize quotes for emphasis */
+}
+
+/* Additional styling for the visual inspiration section */
+.positivity__visual-inspiration {
+    margin-bottom: 20px; /* Space below the section for separation */
+    text-align: center; /* Center-aligns content */
+}
+
+/* Styling for the inspirational image */
+.positivity__inspiration-image {
+    width: 100%; /* Full width to fit the container */
+    height: 300px; /* Fixed height */
+    background-image: url('~/public/m1Motivation.jpeg'); /* Background image URL */
+    background-size: cover; /* Ensures the image covers the area */
+    background-position: center; /* Centers the image */
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+/* Styling for the affirmations */
+.positivity__affirmations .positivity__affirmation {
+    color: #030F28; /* Dark blue for consistency and emphasis */
+    margin-bottom: 15px; /* Space between affirmations */
+}

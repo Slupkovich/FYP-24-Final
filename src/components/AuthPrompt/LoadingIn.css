@@ -1,0 +1,62 @@
+/* Main container for the loading spinner, adjusting alignment and layout */
+.loading-in {
+  display: flex;
+  align-items: flex-start; /* Align items to the top to start the content from the top */
+  justify-content: center; /* Center content horizontally */
+  min-height: 90vh; /* Sets minimum height similar to the auth prompt, less than full viewport for aesthetic spacing */
+  padding-top: 5vh; /* Adds vertical space from the top for better visual placement */
+  background: #030F28; /* Dark blue background colour, adjustable to fit your branding */
+  color: #ffffff; /* Set text color to white, useful if text elements are added */
+  transition: all 0.3s ease; /* Smooth transition for all animated properties */
+}
+
+/* Container that wraps the spinner, giving it a distinct styling and placement */
+.loading-in__container {
+  padding: 2rem; /* Provides internal spacing */
+  background: #ffffff; /* White background to contrast with the spinner and outer container */
+  border-radius: 20px; /* Rounded corners for a softer visual effect */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth and focus */
+  width: 100%; /* Full width but controlled by max-width for responsiveness */
+  max-width: 500px; /* Maximum width to keep the content well-contained */
+  display: flex;
+  align-items: center; /* Center items vertically within the container */
+  justify-content: center; /* Center content horizontally within the container */
+}
+
+/* Content area specifically for the spinner, ensuring it's perfectly centered */
+.loading-in__content {
+  display: flex;
+  justify-content: center; /* Ensure the spinner is centered horizontally */
+  align-items: center; /* Ensure the spinner is centered vertically */
+}
+
+/* Styling for the spinner itself */
+.loading-in__spinner {
+  border: 5px solid rgba(0, 0, 0, 0.1); /* Subtle border with a slight transparency for a refined look */
+  width: 100px; /* Set a definitive size for the spinner */
+  height: 100px; /* Ensure the spinner is perfectly circular with equal height and width */
+  border-radius: 50%; /* Full rounding to create a circle */
+  border-left-color: #5EC3E5; /* Bright brand color for the active part of the spinner */
+  animation: spin 1.5s linear infinite; /* Continuous rotation animation, made smoother and slightly slower */
+}
+
+/* Keyframe animation to rotate the spinner */
+@keyframes spin {
+  to {
+    transform: rotate(1turn); /* Complete a full 360-degree turn */
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .loading-in {
+    align-items: center; /* Vertically center the content on smaller screens */
+    padding-top: 0; /* Eliminate top padding for a balanced center alignment */
+    padding-bottom: 50vh; /* Add substantial bottom padding to vertically center the spinner */
+  }
+
+  .loading-in__container {
+    width: 90%; /* Adjust width to be more responsive and aligned with mobile styling */
+    padding: 1rem; /* Decrease padding for a tighter fit on smaller devices */
+  }
+}

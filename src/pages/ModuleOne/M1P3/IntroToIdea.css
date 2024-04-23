@@ -1,0 +1,105 @@
+/* Main container for idea generation section, defines layout and styling for background and alignment */
+.idea-generation-section {
+    background-color: #ffffff;  /* White background for clarity and focus */
+    padding: 100px 40px; /* Uniform padding for consistent spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease; /* Smooth transitions for any changes */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+/* Specific styling for the idea generation container */
+.idea-generation {
+    width: 100%;
+    max-width: 960px; /* Maximum width for optimal reading */
+    padding: 0 40px; /* Consistent padding for internal spacing */
+    text-align: center; /* Ensures text is centered */
+    margin: auto; /* Auto margin for automatic centering */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transitions for hover effects */
+}
+
+/* Hover effects for the idea generation container */
+.idea-generation:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Lighter shadow on hover for a lifting effect */
+    transform: translateY(-5px); /* Slight upward move to indicate selection */
+}
+
+/* Styling for the title within the idea generation container */
+.idea-generation__title {
+    font-size: 36px; /* Large font size for prominence */
+    font-weight: 600; /* Semi-bold weight for clarity */
+    color: #030F28; /* Dark blue for contrast */
+    margin: 1rem 0; /* Standard margin for spacing */
+    position: relative;
+    padding-bottom: 10px; /* Bottom padding for space under text */
+}
+
+/* After pseudo-element for title underline */
+.idea-generation__title::after {
+    content: '';
+    display: block;
+    height: 3px; /* Consistent thickness with other titles */
+    background-color: #5EC3E5; /* Bright blue for thematic consistency */
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Positioned below the title */
+}
+
+/* Subtitle styling for secondary text under the title */
+.idea-generation__subtitle {
+    font-size: 2rem; /* Large readable size */
+    font-weight: 300; /* Lighter font weight for differentiation */
+    margin-top: 32px; /* Top margin for spacing from title */
+    margin-bottom: 24px; /* Bottom margin before additional content */
+    color: #5EC3E5; /* Bright blue for thematic consistency */
+}
+
+/* Definitions and list items within the idea generation container */
+.idea-generation__definition, .idea-generation__list-item {
+    font-size: 1.2rem; /* Slightly larger font for readability */
+    margin-bottom: 16px; /* Consistent bottom margin */
+    line-height: 1.6; /* Line height for better readability */
+}
+
+/* Styling for the list in the idea generation container */
+.idea-generation__list {
+    list-style: none;
+    padding-left: 0;
+    max-width: 80%; /* Limited width for focus and readability */
+    margin: 0 auto; /* Centering the list */
+}
+
+/* Individual list items within the list */
+.idea-generation__list-item {
+    margin-bottom: 12px; /* Consistent spacing for cleanliness */
+    position: relative;
+}
+
+/* Pseudo-element for custom bullets in list items */
+.idea-generation__list-item::before {
+    content: '•';
+    color: #5EC3E5; /* Bright blue for visual consistency */
+    font-size: 20px; /* Visible size for bullet points */
+    line-height: 0;
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 992px) {
+    .idea-generation-section {
+        padding: 50px 20px; /* Reduced padding on smaller screens */
+    }
+
+    .idea-generation {
+        padding: 0 5%; /* Adaptive padding for consistency */
+    }
+
+    .idea-generation__list {
+        text-align: center; /* Ensures center alignment of list on mobile */
+    }
+}

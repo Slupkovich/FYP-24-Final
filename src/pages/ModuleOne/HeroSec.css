@@ -1,0 +1,52 @@
+/* Styling for the hero section, including background and layout */
+.hero {
+  position: relative; /* Establishes a positioning context for absolutely positioned children */
+  display: flex; /* Utilises Flexbox for layout */
+  flex-direction: column; /* Stacks child elements vertically */
+  justify-content: center; /* Vertically centers content in the container */
+  align-items: center; /* Horizontally centers content */
+  height: 85vh; /* Sets the height to 85% of the viewport height */
+  background-image: url('~/public/M1 HS Photo.jpeg'); /* Replace with the correct path to your image */
+  background-size: cover; /* Ensures the background image covers the entire element */
+  background-position: center; /* Centers the background image */
+  color: #ffffff; /* Sets text color to white for contrast against the background */
+  text-align: center; /* Aligns text in the center */
+  padding: 0 20px; /* Adds horizontal padding */
+}
+
+/* Container for scroll indicators, positioned at the bottom of the hero section */
+.scroll-indicators {
+  position: absolute; /* Positions the container at the bottom of its parent */
+  bottom: 20px; /* Distance from the bottom of the hero section */
+  display: flex; /* Uses Flexbox for layout */
+  width: 100%; /* Spans the full width of its parent */
+  justify-content: space-between; /* Places the indicators on the far left and right */
+}
+
+/* Base styling for arrows indicating a scroll action */
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent; /* Creates the left side of the arrow */
+  border-right: 15px solid transparent; /* Creates the right side of the arrow */
+  border-top: 15px solid #ffffff; /* Creates the top of the arrow, making it visible */
+  cursor: default; /* Changes the cursor to default */
+  animation: bounce 2s infinite; /* Applies a bouncing animation */
+}
+
+/* Additional styling for the left arrow */
+.left {
+  margin-left: 20px; /* Positions the left arrow towards the left edge */
+}
+
+/* Additional styling for the right arrow */
+.right {
+  margin-right: 20px; /* Positions the right arrow towards the right edge */
+}
+
+/* Keyframes for the bounce animation, demonstrating a simple bounce effect */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); } /* Start and end at the original position */
+  40% { transform: translateY(-20px); } /* Arrow moves up, indicating a bounce */
+  60% { transform: translateY(-10px); } /* Arrow comes down slightly, enhancing the bounce effect */
+}

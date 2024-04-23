@@ -1,0 +1,73 @@
+/* Styles for the Hero Section Container */
+.hp-hero-sec__container {
+  background-image: url('~/public/bgonebest.png'); /* Background image path */
+  height: 100vh; /* Full viewport height */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* No repetition of the background image */
+  background-size: cover; /* Cover the entire container with the image */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center children vertically in the container */
+  align-items: center; /* Center children horizontally */
+  color: white; /* White text color for all child elements */
+  text-align: center; /* Center align the text */
+  padding: 0 15px; /* Horizontal padding */
+}
+
+/* Styles for the title in the hero section */
+.hp-hero-sec__container h1 {
+  font-size: 2.5rem; /* Large font size for the title */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+/* Styles for the subtitle in the hero section */
+.hp-hero-sec__container p {
+  font-size: 1.5rem; /* Font size for the subtitle */
+  margin-top: 1.2rem; /* Top margin */
+  margin-bottom: 1.0rem; /* Bottom margin */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+/* Styles for the 'Join Now' button */
+.hp-hero-sec__btn {
+  background-image: linear-gradient(to right, #49A6E9, #5EC3E5); /* Gradient background */
+  background-size: 200% auto; /* Larger background size for hover effect */
+  color: white; /* White text color */
+  border: none; /* No borders */
+  padding: 1.25rem 2.5rem; /* Padding around the text */
+  font-size: 1.25rem; /* Font size */
+  font-weight: 600; /* Font weight */
+  letter-spacing: 0.05em; /* Spacing between letters */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 30px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.3s ease; /* Smooth transitions for hover effects */
+  margin-bottom: 6.7rem;
+}
+
+/* Hover state for the button */
+.hp-hero-sec__btn:hover {
+  transform: translateY(-3px); /* Move button up slightly */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow for 3D effect */
+  border: 1px solid #5EC3E5; /* Subtle border */
+  background-position: right center; /* Shift background for visual effect */
+}
+
+/* Focus state for the button */
+.hp-hero-sec__btn:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #49A6E9; /* Focus shadow */
+}
+
+/* Active state for the button */
+.hp-hero-sec__btn:active {
+  transform: translateY(1px); /* Move button down slightly on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow for click effect */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 798px) {
+  .hp-hero-sec__container h1 {
+    font-size: 2.3rem; /* Slightly smaller font size on smaller screens */
+  }
+}

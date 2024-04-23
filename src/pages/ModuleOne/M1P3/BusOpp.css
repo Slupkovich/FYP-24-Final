@@ -1,0 +1,168 @@
+/* Styling for the business opportunities section */
+.business-opportunities {
+  background-color: #ffffff; /* White background for a clean, neutral look */
+  padding: 100px 0; /* Uniform vertical padding for spacing */
+  border-top: 2px solid #ececec; /* Subtle top border for visual separation */
+  color: white; /* White text color, may be an oversight since the background is also white */
+  transition: all 0.5s ease-in-out; /* Smooth transitions for interactive elements */
+  display: flex; /* Flexbox layout to enable flexible alignments */
+  justify-content: center; /* Centers content horizontally within the container */
+  align-items: center; /* Centers content vertically within the container */
+}
+
+/* Title styling within the business opportunities section */
+.business-opportunities__title {
+  font-size: 2.5rem; /* Large font size for clear visibility */
+  margin-bottom: 40px; /* Space below the title for separation */
+  color: #030F28; /* Dark blue for contrast against the light background */
+  position: relative; /* Position relative to allow for positioning of pseudo-elements */
+}
+
+/* Pseudo-element for decorative underline effect under the title */
+.business-opportunities__title::after {
+  content: '';
+  display: block;
+  width: 100%; /* Ensures the line spans the entire width of the title */
+  height: 3px; /* Specifies the thickness of the line */
+  background: #4db2d6; /* Light blue color matching other decorative elements */
+  margin-top: 8px; /* Creates a small gap between the title and the line */
+}
+
+/* Container for elements within the business opportunities section */
+.business-opportunities__container {
+  display: flex;
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center; /* Aligns children in the center horizontally */
+  gap: 20px; /* Spacing between each child element */
+  border-radius: 10px; /* Rounded corners for a smoother visual appearance */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Hover effects for the container, adding shadow and a slight upward movement */
+.business-opportunities__container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+  transform: translateY(-5px); /* Moves the container up slightly on hover */
+}
+
+/* Styling for the main content element within the container */
+.business-opportunities__main {
+  background-color: #5EC3E5; /* Bright blue background for visibility */
+  color: #ffffff; /* White text for contrast */
+  border-radius: 50%; /* Circular shape */
+  width: 200px; /* Fixed width for the circle */
+  height: 200px; /* Fixed height to maintain the circular shape */
+  display: flex;
+  align-items: center; /* Centers text vertically */
+  justify-content: center; /* Centers text horizontally */
+  font-size: 1.2rem; /* Medium font size for readability */
+  font-weight: bold; /* Bold text for emphasis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  margin-bottom: 30px; /* Bottom margin for spacing below the element */
+}
+
+/* Container for criteria elements, allowing flexible wrapping and center alignment */
+.business-opportunities__criteria-container {
+  display: flex;
+  flex-wrap: wrap; /* Enables items to wrap within the container */
+  justify-content: center; /* Centers items horizontally */
+  gap: 20px; /* Space between each item */
+  padding: 30px; /* Padding around the container */
+}
+
+/* Individual criteria elements, styled as circles with central alignment of content */
+.business-opportunities__criteria {
+  background-color: #030F28; /* Dark blue background for contrast */
+  color: #ffffff; /* White text for readability */
+  border-radius: 50%; /* Ensures the elements are perfectly circular */
+  width: 250px; /* Fixed width */
+  height: 250px; /* Fixed height, matching the width to maintain circle shape */
+  display: flex;
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  flex-direction: column; /* Stacks content vertically within each criteria */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  padding: 20px; /* Padding inside each criteria for spacing */
+  overflow: hidden; /* Hides any overflow */
+  position: relative;
+  text-align: center; /* Ensures text is centered */
+  transition: transform 0.3s ease-in-out; /* Smooth transform transition */
+}
+
+/* Hover effect for criteria elements, slightly enlarging them to indicate interactivity */
+.business-opportunities__criteria:hover {
+  transform: scale(1.05); /* Slightly enlarges the element */
+}
+
+/* Styling for titles within each criteria, providing emphasis and spacing */
+.business-opportunities__criteria-title {
+  font-size: 1.2rem; /* Medium font size */
+  font-weight: bold; /* Bold for emphasis */
+  margin-bottom: 5px; /* Space below the title */
+}
+
+/* Descriptive text within each criteria, ensuring readability and proper word wrapping */
+.business-opportunities__criteria-description {
+  font-size: 0.85rem; /* Small font size for detailed text */
+  display: block;
+  word-wrap: break-word; /* Allows words to break and wrap onto the next line */
+  overflow-wrap: break-word; /* Ensures long words do not overflow */
+  padding: 0 10px; /* Horizontal padding */
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+  /* Center-aligns the title text when space is constrained */
+  .business-opportunities__title {
+    text-align: center;
+  }
+
+  /* Adjusts the criteria container to a single-column grid layout for better mobile presentation */
+  .business-opportunities__criteria-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 40px; /* Increased gap for clear separation */
+    justify-items: center; /* Centers items within their grid cells */
+  }
+
+  /* Adjusts criteria sizing and styling for smaller screens */
+  .business-opportunities__criteria {
+    width: calc(100% - 40px); /* Full width minus padding */
+    height: auto; /* Height adjusts to content */
+    border-radius: 30px; /* Softer rounded corners */
+    padding: 20px; /* Consistent padding */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions for multiple properties */
+  }
+
+  /* Modified hover effect for smaller screens */
+  .business-opportunities__criteria:hover {
+    transform: scale(1.03); /* Slightly smaller scale effect */
+    z-index: 1; /* Raises the hovered item above others */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+  }
+
+  /* Adjusted font sizes for readability on smaller devices */
+  .business-opportunities__criteria-title {
+    font-size: 1.5rem; /* Larger font size for titles */
+  }
+
+  .business-opportunities__criteria-description {
+    font-size: 1rem; /* Larger font size for descriptions */
+  }
+}
+
+/* Additional media query for very small screens */
+@media (max-width: 600px) {
+  /* Adjusts padding for the main business opportunities container */
+  .business-opportunities {
+    padding: 40px 10px;
+  }
+
+  /* Scaled font sizes for titles and descriptions on small devices */
+  .business-opportunities__criteria-title {
+    font-size: 1.3rem; /* Slightly reduced font size from tablet */
+  }
+
+  .business-opportunities__criteria-description {
+    font-size: 0.9rem; /* Increased from the base but smaller than on tablet */
+  }
+}

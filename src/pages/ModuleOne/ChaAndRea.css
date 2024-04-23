@@ -1,0 +1,69 @@
+/* Base styling for the challenges section */
+.challenges {
+  display: grid; /* Utilises CSS grid for layout */
+  grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+  gap: 20px; /* Space between columns */
+  border-top: 2px solid #ececec; /* Light grey border at the top for visual separation */
+  background: #ffffff; /* White background for the section */
+  padding: 100px 40px; /* Ample vertical padding for breathing space and horizontal padding for content alignment */
+  color: #030F28; /* Dark blue text colour for contrast */
+  align-items: start; /* Aligns items at the top of their grid cell */
+}
+
+/* Styling for the headings within the challenges section */
+.challenges__heading {
+  color: #030F28; /* Dark blue for emphasis */
+  margin-bottom: 15px; /* Space below the heading */
+  position: relative; /* For pseudo-element positioning */
+  display: block; /* Block display to span the full width */
+  text-align: center; /* Centers the heading text */
+  width: 100%; /* Full width to align with the pseudo-element */
+}
+
+/* Decorative underline for the section headings */
+.challenges__heading::after {
+  content: ''; /* Necessary for the pseudo-element to display */
+  display: block; /* Block-level to span width */
+  width: 100%; /* Full width of the parent */
+  height: 3px; /* Thickness of the underline */
+  background-color: #5EC3E5; /* Light blue for branding consistency */
+  margin-top: 8px; /* Space between the heading and the underline */
+  margin-bottom: 32px; /* Additional spacing below the underline for separation */
+}
+
+/* Styling for the list of challenges */
+.challenges__list {
+  list-style: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+/* Individual items within the list */
+.challenges__item {
+  background: #030F28; /* Dark background for readability and contrast */
+  color: #ffffff; /* White text for readability */
+  margin-bottom: 10px; /* Spacing between items */
+  padding: 15px; /* Padding for content spacing */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  text-align: center; /* Center-aligns the text */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for items */
+.challenges__item:hover {
+  background: #5EC3E5; /* Light blue background for interactive feedback */
+  color: #030F28; /* Dark text for contrast */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .challenges {
+    grid-template-columns: 1fr; /* Stacks items in a single column */
+    text-align: center; /* Ensures text remains centered */
+  }
+
+  .challenges__heading {
+    margin-left: auto;
+    margin-right: auto; /* Auto margins for center alignment */
+  }
+}

@@ -1,0 +1,107 @@
+/* Base styles for the download section */
+.download {
+    background: #030F28; /* Dark blue background for high contrast with white text */
+    padding: 60px 20px; /* Generous padding for a centered look, add horizontal padding for smaller screens */
+    margin: 0; /* Utilise full viewport without margins */
+    width: 100vw; /* Full viewport width */
+    min-height: 100vh; /* Minimum viewport height */
+    box-shadow: 0px 8px 20px rgba(0, 15, 40, 0.25); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center; /* Horizontally center content */
+}
+
+.download__container {
+    text-align: center; /* Center-align all text within the container */
+    max-width: 800px; /* Maximum width for better control over the layout */
+    width: 100%; /* Full width on smaller screens for better use of space */
+}
+
+.download__title {
+    font-size: 36px; /* Large font size for visibility */
+    color: #ffffff; /* White colour for contrast against the dark background */
+    position: relative; /* Relative position for positioning pseudo-elements */
+    margin: 1rem 0; /* Space around the title */
+    display: inline-block; /* Inline block for layout control */
+}
+
+.download__title::after {
+    content: '';
+    display: block;
+    width: 100%; /* Match the parent width */
+    height: 3px; /* Height of the underline */
+    background: #5EC3E5; /* Light blue to match other accent elements */
+    margin-top: 8px; /* Space above the underline */
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Positioning below the text */
+}
+
+.download__description {
+    color: #ffffff;
+    font-size: 1rem; /* Standard font size for body text */
+    margin-bottom: 2rem; /* Spacing before the next section */
+}
+
+.download__list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.download__item {
+    margin-bottom: 20px; /* Space between items */
+}
+
+.download__button {
+    background-color: transparent; /* Transparent background for a clean style */
+    color: #5EC3E5; /* Light blue for visibility and style */
+    border: 2px solid #5EC3E5; /* Border to match the text color */
+    padding: 15px 25px; /* Padding for size and comfort */
+    border-radius: 50px; /* Fully rounded borders for a modern look */
+    font-size: 0.9rem; /* Slightly smaller font size for buttons */
+    font-weight: 600; /* Medium weight for emphasis */
+    letter-spacing: 0.5px; /* Spacing out letters for readability */
+    text-decoration: none; /* No underlines */
+    display: inline-block; /* Inline-block for layout purposes */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    text-align: center; /* Center-align text */
+    min-width: 160px; /* Minimum width for uniformity */
+}
+
+.download__button:hover, .download__button:focus {
+    background-color: #5EC3E5; /* Change background on hover/focus */
+    color: #030F28; /* Change text color for contrast on hover/focus */
+    border-color: #5EC3E5; /* Ensure the border color matches the background */
+    transform: translateY(-3px); /* Lift button to indicate interactivity */
+    box-shadow: 0 4px 8px rgba(94, 195, 229, 0.6); /* Subtle shadow for depth */
+    text-decoration: none; /* No underline on hover */
+}
+
+.download__button:active {
+    transform: translateY(-1px); /* Slightly push the button down on click */
+    box-shadow: 0 2px 4px rgba(94, 195, 229, 0.4); /* Less intense shadow for click effect */
+}
+
+/* Responsive tweaks for better accessibility and mobile friendliness */
+@media (max-width: 768px) {
+    .download {
+        padding: 40px 20px; /* Reduced padding on smaller screens, with horizontal padding */
+        flex-direction: column; /* Stack elements vertically on mobile */
+        justify-content: space-around; /* Even spacing for stacked elements */
+    }
+
+    .download__container {
+        width: 100%; /* Full width on smaller screens for better use of space */
+    }
+
+    .download__title {
+        font-size: 34px; /* Smaller font size for smaller screens */
+    }
+
+    .download__button {
+        width: 90%; /* Wider buttons on mobile for easier interaction */
+        margin-bottom: 12px; /* More space between buttons */
+    }
+}

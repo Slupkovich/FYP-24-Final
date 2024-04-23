@@ -1,0 +1,138 @@
+/* Styling for the main container of Maslow's hierarchy section */
+.maslows-hierarchy {
+  background-color: #ffffff; /* White background for a clean look */
+  padding: 100px 0; /* Vertical padding for spacing */
+  border-top: 2px solid #ececec; /* Light grey border for subtle separation */
+  transition: all 0.5s ease-in-out; /* Smooth transition for hover effects */
+  display: flex; /* Flexbox layout for inner alignment */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+}
+
+/* Container for all content related to the hierarchy, providing structured layout */
+.maslows-hierarchy__container {
+  max-width: 1130px; /* Maximum width for content */
+  margin: 0 auto; /* Centers the container */
+  padding: 0 20px; /* Padding to prevent content touching the container edges */
+  border-radius: 10px; /* Rounded corners for a softer visual impact */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for interactive effects */
+  text-align: center; /* Text alignment */
+}
+
+/* Hover effect that adds shadow and lifts the container */
+.maslows-hierarchy__container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  transform: translateY(-5px); /* Slight upward movement */
+}
+
+/* Title styling within the hierarchy section */
+.maslows-hierarchy__title {
+  font-size: 2.5rem; /* Large font size for visibility */
+  margin-bottom: 40px; /* Spacing below the title */
+  color: #030F28; /* Dark blue color for contrast */
+  position: relative; /* Needed for positioning pseudo elements */
+  text-align: center; /* Centers the title */
+}
+
+/* Decorative underline for the title */
+.maslows-hierarchy__title::after {
+  content: '';
+  display: block;
+  width: 100%; /* Full width to match the title's width */
+  height: 3px; /* Thickness of the underline */
+  background: #4db2d6; /* Blue color for visual continuity */
+  margin-top: 8px; /* Spacing between the title and underline */
+}
+
+/* Description text styling under the title */
+.maslows-hierarchy__description {
+  font-size: 1.2rem; /* Readable font size */
+  margin-bottom: 30px; /* Spacing below the description */
+  line-height: 1.6; /* Line height for readability */
+  text-align: center; /* Ensures text is centered */
+  color: #030F28; /* Dark blue for readability */
+  max-width: 700px; /* Restricts width for better text display */
+  margin-left: auto; /* Horizontally centers the text block */
+  margin-right: auto;
+}
+
+/* Styling for paragraphs that will display the content related to active tabs */
+.maslows-hierarchy__paragraph {
+  font-size: 1.2rem; /* Consistent with description for uniformity */
+  margin-bottom: 1.5em; /* Space between paragraphs */
+}
+
+/* Image styling within the section */
+.maslows-hierarchy__image {
+  max-width: 100%; /* Full width of its container */
+  height: auto; /* Keeps the image's aspect ratio */
+  border-radius: 8px; /* Rounded corners for aesthetics */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Flex container for level buttons, allowing responsive wrapping */
+.maslows-hierarchy__levels {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap in smaller spaces */
+  justify-content: center; /* Centers buttons horizontally */
+  gap: 15px; /* Space between buttons */
+  margin-top: 20px;
+  margin-bottom: 40px; /* Visual separation from other content */
+}
+
+/* Styling for interactive level buttons */
+.maslows-hierarchy__level-button {
+  background: none;
+  border: 2px solid #4db2d6; /* Bordered style with theme color */
+  padding: 15px 25px; /* Sufficient padding for touch targets */
+  min-width: 180px; /* Minimum width for uniform appearance */
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer; /* Indicates button functionality */
+  transition: background-color 0.3s, color 0.3s; /* Smooth color transition on hover */
+  font-size: 1rem;
+  font-weight: 500; /* Semi-bold for legibility */
+  line-height: 1.5;
+}
+
+/* Hover and active state styles for buttons */
+.maslows-hierarchy__level-button.active,
+.maslows-hierarchy__level-button:hover {
+  background-color: #4db2d6; /* Theme color on hover/active */
+  color: white;
+  outline: none; /* Removes default focus outline */
+}
+
+/* Content card that displays dynamic text based on active tab */
+.maslows-hierarchy__content-card {
+  max-width: 800px; /* Limits content width for readability */
+  margin: 20px auto; /* Centers the card vertically and horizontally */
+  padding: 20px; /* Internal padding for content separation */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Media queries adjust layout for mobile views */
+@media (max-width: 767px) {
+  .maslows-hierarchy__container,
+  .maslows-hierarchy__levels-wrapper,
+  .maslows-hierarchy__content-card {
+    max-width: 100%; /* Full width for mobile screens */
+    padding: 50px 10px; /* Adjusted padding for smaller screens */
+  }
+
+  .maslows-hierarchy {
+    padding: 20px; /* Reduced padding in the main section */
+  }
+
+  .maslows-hierarchy__title {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .maslows-hierarchy__description {
+    font-size: 0.9rem; /* Smaller text for compact displays */
+  }
+
+  .maslows-hierarchy__level-button {
+    padding: 12px 20px; /* Smaller padding in buttons for compact layout */
+  }
+}

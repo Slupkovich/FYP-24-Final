@@ -1,0 +1,141 @@
+/* Main container style, aligning content both horizontally and vertically */
+.SuLoginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #030F28; /* Dark blue to contrast with form elements */
+    overflow-y: auto; /* Enable vertical scrolling if content is taller than the screen */
+}
+
+/* Error message styling */
+.errorMessage {
+    color: red; /* Red to signify errors */
+    text-align: center; /* Center the text to ensure it is noticeable */
+}
+
+/* Styling for the form containing signup elements */
+.SuLoginForm {
+    background-color: #ffffff; /* White background for clarity */
+    padding: 15px; /* Ample padding around the content */
+    margin: 15px; /* Added margin to prevent sticking to edges */
+    border-radius: 10px; /* Rounded edges for a softer look */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: auto; /* Width determined by content */
+    max-width: 400px; /* Maximum width to ensure form doesn't stretch too wide */
+    display: flex;
+    flex-direction: column; /* Organize children vertically */
+    align-items: center; /* Align items in the center for a tidy layout */
+    max-height: 90vh; /* Ensure the form isn't taller than the screen */
+    overflow-y: auto; /* Enable scrolling within the form */
+    box-sizing: border-box; /* Ensure padding doesn't add to the width */
+}
+
+/* Close button at the top right of the form */
+.SuCloseButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer; /* Indicates that the element is interactive */
+    font-size: 25px; /* Visible size */
+    color: #ffffff; /* White for visibility against the background */
+}
+
+/* Logo styling at the top of the form */
+.SuLogo img {
+    width: 160px; /* Fixed width for consistency */
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+/* Header style for the account creation or confirmation stage */
+.createYourAccount {
+    text-align: center; /* Centering the text for focus */
+    font-size: 30px; /* Large size for importance */
+    font-weight: bold; /* Bold for emphasis */
+    margin-bottom: 20px; /* Spacing before the next elements */
+}
+
+/* Common styles for text indicating stage and login link */
+.createYourAccount,
+.alreadyMember,
+.SuLoginLink {
+    text-align: center; /* Ensure text is centered */
+    margin-bottom: 20px; /* Consistent spacing for visual rhythm */
+}
+
+/* Input, select and button shared styles */
+.SuLoginForm input,
+.SuLoginForm select,
+.SuLoginForm button {
+    width: 100%; /* Full width to maintain form uniformity */
+    padding: 12px; /* Padding for touch comfort */
+    margin-bottom: 15px; /* Space between form elements */
+    border: 2px solid #5EC3E5; /* Blue border for a fresh look */
+    border-radius: 20px; /* Rounded corners for modern style */
+    font-size: 16px; /* Readability */
+    display: block; /* Block display for stacking */
+    max-width: 280px; /* Restrained width for a neat appearance */
+    margin-left: auto; /* Centering within the form */
+    margin-right: auto; /* Centering within the form */
+    text-align: center; /* Text alignment in inputs */
+}
+
+/* Special styling for select elements to remove default browser styling */
+.SuLoginForm select {
+    -webkit-appearance: none; /* Chrome, Safari */
+    -moz-appearance: none; /* Firefox */
+    appearance: none; /* Standard */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%235EC3E5" d="M7 10l5 5 5-5z"/></svg>') no-repeat;
+    background-position: calc(100% - 10px) center; /* Icon positioned inside the right edge */
+    background-size: 15px; /* Size of the dropdown icon */
+}
+
+/* Styling for inputs and selects when placed side by side */
+.halfWidthInputs {
+    display: flex;
+    justify-content: space-between; /* Space inputs evenly */
+    margin-left: auto; /* Centering the container */
+    margin-right: auto; /* Centering the container */
+    max-width: 280px; /* Match width to other inputs for consistency */
+}
+
+.halfWidthInputs select,
+.halfWidthInputs input {
+    width: 48%; /* Half width allowing for margin between */
+    text-align: left; /* Align text to the left within the inputs */
+}
+
+/* Styling for the login link below the form */
+.alreadyMember,
+.SuLoginLink {
+    margin-bottom: 20px; /* Space below the text for separation */
+}
+
+/* Button styles to match the overall form styling */
+.SuLoginForm button {
+    background-color: #5EC3E5; /* Bright sky blue for appeal */
+    color: white; /* White text for contrast */
+    cursor: pointer; /* Indicate interactive */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+    width: calc(100% - 40px); /* Width adjustment for padding */
+    border-radius: 5px; /* Subtle rounding */
+    max-width: 280px; /* Consistent width with inputs */
+    margin-left: auto; /* Centered within form */
+    margin-right: auto; /* Centered within form */
+}
+
+/* Hover effect for the button */
+.SuLoginForm button:hover {
+    background-color: #4db2d6; /* Slightly darker shade on hover */
+}
+
+/* Link colour and interaction */
+.SuLoginLink {
+    color: #5EC3E5; /* Maintaining the blue theme */
+    cursor: pointer; /* Indicate clickable */
+}
+
+/* Hover effect for the login link */
+.SuLoginLink:hover {
+    text-decoration: underline; /* Underline on hover for emphasis */
+}

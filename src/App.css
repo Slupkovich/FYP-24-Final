@@ -1,0 +1,7 @@
+/* Global styles for the entire application */
+html, body {
+    font-family: 'Montserrat', sans-serif; /* Sets Montserrat as the base font across the app */
+    margin: 0; /* Removes default margin provided by browsers */
+    padding: 0; /* Removes default padding provided by browsers */
+    overflow-x: hidden; /* Prevents horizontal scrolling across the entire app */
+}

@@ -1,0 +1,213 @@
+/* Styles for the main carousel container */
+.modules-carousel {
+  background-color: #030F28; /* Dark navy blue background for consistency across sections */
+  padding: 100px 0; /* Vertical padding to create substantial spacing above and below */
+  border-top: 2px solid #ececec; /* Light grey border on top for a subtle separation */
+  color: white; /* White text color for high contrast */
+  transition: all 0.5s ease-in-out; /* Smooth transition for any changes */
+  display: flex; /* Flexbox layout for centering content */
+  justify-content: center; /* Horizontal center alignment */
+  align-items: center; /* Vertical center alignment */
+}
+
+/* Container for carousel elements */
+.modules-carousel__container {
+  width: 100%; /* Full width to utilize available space */
+  padding: 0 37px; /* Horizontal padding for content spacing */
+  text-align: center; /* Center alignment of text within the container */
+}
+
+/* Styles for the title within the carousel */
+.modules-carousel__title {
+  font-size: 36px; /* Large font size for visibility */
+  margin-bottom: 2rem; /* Space below the title for separation */
+  color: #ffffff; /* White color for the text */
+  position: relative; /* Relative positioning for pseudo-elements */
+  display: inline-block; /* Display as block but limit width to content size */
+}
+
+/* Decorative underline for the title */
+.modules-carousel__title::after {
+  content: ''; /* Necessary for a pseudo-element */
+  display: block; /* Block level to allow width and height settings */
+  width: 100%; /* Full width of the title element */
+  height: 3px; /* Height of the underline */
+  background: #4db2d6; /* Bright blue color for visual interest */
+  margin-top: 8px; /* Space between the title and the line */
+}
+
+/* Styles for individual slides within the carousel */
+.modules-carousel__slide {
+  padding: 10px; /* Padding around slides for spacing */
+  outline: none; /* Remove outline for aesthetics */
+  margin-right: 10px; /* Right margin for spacing between slides */
+  box-sizing: border-box; /* Box-sizing to include padding and border in width/height */
+}
+
+/* Custom styles for navigation dots provided by slick slider */
+.modules-carousel .slick-dots {
+  text-align: center; /* Center alignment of dots */
+  padding: 10px 0; /* Padding above and below dots */
+  position: absolute; /* Absolute positioning relative to the carousel container */
+  bottom: -30px; /* Position dots slightly outside the bottom of the slides */
+  left: 0; /* Align to the left edge */
+  right: 0; /* Align to the right edge */
+  z-index: 10; /* Ensure dots are above other content */
+}
+
+.modules-carousel .slick-dots li {
+  display: inline-block; /* Display dots in a line */
+  margin: 0 5px; /* Spacing between dots */
+}
+
+.modules-carousel .slick-dots li button {
+  font-size: 0; /* Hide text size (dots are visual only) */
+  line-height: 0; /* Line height to 0 to remove space */
+  display: block; /* Block display for size specifications */
+  width: 10px; /* Width of dot */
+  height: 10px; /* Height of dot */
+  padding: 5px; /* Padding for clickable area */
+  cursor: pointer; /* Pointer cursor to indicate interactivity */
+  border: 0; /* No border */
+  outline: none; /* No outline on focus */
+  background: transparent; /* Transparent background */
+}
+
+.modules-carousel .slick-dots li button:before {
+  font-family: 'slick'; /* Use slick's custom font for dots */
+  font-size: 16px; /* Font size for visible dot */
+  line-height: 20px; /* Line height for vertical alignment */
+  color: rgba(255, 255, 255, 0.5); /* Light white color for dots */
+  opacity: 1; /* Full opacity for dots */
+  content: '•'; /* Content is a bullet point */
+  transition: all 0.25s ease-in-out; /* Smooth transition for color changes */
+}
+
+.modules-carousel .slick-dots li button:hover:before {
+  color: rgba(255, 255, 255, 0.75); /* Lighten dot color on hover for feedback */
+}
+
+.modules-carousel .slick-dots li.slick-active button:before {
+  color: #5EC3E5; /* Highlight color for active dot */
+  transform: scale(1.25); /* Scale up active dot for emphasis */
+}
+
+/* Base styling for each module card */
+.module-card {
+  perspective: 1500px; /* Sets the perspective for 3D transforms */
+  width: 100%; /* Full width of the container */
+  margin-bottom: 50px; /* Space below each card */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stacks children vertically */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions for movement and shadow */
+  overflow: hidden; /* Hides anything outside the border radius */
+  background-color: #ffffff; /* White background for the card */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Hover effect for the module card */
+.module-card:hover {
+  transform: translateY(-5px); /* Moves the card up slightly */
+}
+
+/* Inner container of the card, which will flip */
+.module-card__inner {
+  width: 100%; /* Full width of the card */
+  min-height: 400px; /* Minimum height to maintain structure */
+  position: relative; /* Relative to allow absolute positioning of children */
+  transition: transform 0.8s; /* Slow transition for the flip effect */
+  transform-style: preserve-3d; /* Preserves 3D positioning */
+}
+
+/* Flipping the card on hover */
+.module-card:hover .module-card__inner {
+  transform: rotateY(180deg); /* Rotate around the Y-axis */
+}
+
+/* Styling for the front and back faces of the card */
+.module-card__front, .module-card__back {
+  position: absolute; /* Positioned absolutely to overlap each other */
+  width: 100%; /* Full width of the parent */
+  height: 100%; /* Full height to cover the card */
+  backface-visibility: hidden; /* Hides the side not facing the user */
+  border-radius: 8px; /* Rounded corners */
+  display: flex; /* Flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  flex-direction: column; /* Stack children vertically */
+  padding: 30px; /* Padding inside the card */
+  border: 2px solid #ffffff; /* White border for styling */
+}
+
+/* Specific styling for the back of the card */
+.module-card__back {
+  background: #030F28; /* Dark navy background for contrast */
+  transform: rotateY(180deg); /* Pre-rotated to flip correctly */
+  align-items: flex-start; /* Align items to the start (left) */
+  justify-content: center; /* Center content vertically */
+  text-align: left; /* Align text to the left */
+}
+
+/* Icon on the module card */
+.module-card__icon {
+  height: 80px; /* Fixed height for consistency */
+  margin-bottom: 30px; /* Space below the icon */
+}
+
+/* Title on the module card */
+.module-card__title {
+  font-size: 1.4rem; /* Moderate size for readability */
+  color: #02203C; /* Dark blue for contrast on white */
+  font-weight: 600; /* Semi-bold for emphasis */
+  margin: 0 0 20px; /* Space below the title */
+  text-align: center; /* Center-align the text */
+}
+
+/* List of bullet points on the card */
+.module-card__bullet-points {
+  list-style: none; /* No bullet style */
+  padding: 0; /* No padding */
+  margin: 0 10px; /* Horizontal margin for alignment */
+  overflow-y: auto; /* Scrollable if content overflows */
+  max-height: 100%; /* Limit height to the card */
+}
+
+/* Individual bullet points */
+.module-card__bullet-points li {
+  font-size: 1.1rem; /* Size for readability */
+  color: #AAB4BE; /* Light grey for soft contrast */
+  line-height: 1.6; /* Space between lines */
+  padding: 10px 0; /* Vertical padding for spacing */
+  position: relative; /* For positioning before content */
+  transition: color 0.3s; /* Transition for color change on hover */
+}
+
+/* Hover effect for bullet points */
+.module-card__bullet-points li:hover {
+  color: #5EC3E5; /* Bright blue for emphasis */
+}
+
+/* Styling for sub-bullet points */
+.module-card__sub-bullet-points {
+  list-style-type: none; /* No list style */
+  margin-left: 20px; /* Indentation from the parent list */
+  padding-left: 0; /* No padding on the left */
+}
+
+/* Sub-bullet points styling */
+.module-card__sub-bullet-points li {
+  font-size: 0.9rem; /* Smaller font size for sub-items */
+  color: #D6DCE5; /* Light grey for differentiation */
+  padding: 5px 0; /* Vertical padding */
+}
+
+/* Styling for the bullet point prefix */
+.module-card__sub-bullet-points li::before {
+  content: '–'; /* Dash as a bullet */
+  color: #8FA6B2; /* Soft blue for visibility */
+  font-size: 1rem; /* Size for the dash */
+  position: absolute; /* Absolute to position relative to the li */
+  left: -15px; /* Position to the left of the text */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Offset to center exactly */
+}

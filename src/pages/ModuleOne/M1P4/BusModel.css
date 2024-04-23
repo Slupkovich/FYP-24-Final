@@ -1,0 +1,352 @@
+/* Main section styling. Sets vertical padding for the section and enables smooth transition effects. */
+.bmc-section {
+    padding: 50px 0; /* Adds uniform vertical padding. */
+    transition: all 0.3s ease; /* Applies a smooth transition for all changes. */
+}
+
+/* Container styling. Adjusts padding for the container element. */
+.bmc-container {
+    padding: 0 40px; /* Adds horizontal padding. */
+}
+
+/* Header styling. Centers text within the header element. */
+.bmc-header {
+    text-align: center;
+}
+
+/* Styling for the main title and section titles. Sets font colour, weight, and alignment. */
+.bmc-main-title,
+.bmc-container__section-title {
+    color: #030F28; /* Dark blue colour for the text. */
+    font-weight: 600; /* Bold text for emphasis. */
+    text-align: center; /* Centers the text. */
+}
+
+/* Additional styling for the main title. Adjusts font size and sets positioning for the underline effect. */
+.bmc-main-title {
+    font-size: 36px; /* Larger font size for prominence. */
+    font-weight: 600; /* Ensures text is bold. */
+    display: inline-block; /* Allows for the application of positioning. */
+    position: relative; /* Necessary for positioning the underline. */
+}
+
+/* Creates a blue underline effect for the main title. */
+.bmc-main-title::after {
+    content: ''; /* Necessary for generated content. */
+    position: absolute; /* Positions relative to the main title. */
+    display: block; /* Treats the line as a block element. */
+    width: 100%; /* Ensures the line spans the full width of the title. */
+    height: 3px; /* Sets the thickness of the line. */
+    background-color: #5EC3E5; /* Light blue colour for the line. */
+    left: 0;
+    bottom: -10px; /* Positions the line below the text. */
+}
+
+/* Styling adjustments for section titles within the container. */
+.bmc-container__section-title {
+    margin-bottom: 1rem; /* Adds space below the title. */
+    margin-top: 20px; /* Adds space above the title. */
+}
+
+/* Styling for the description container within the main container. Includes rounded corners, padding, and center alignment. */
+.bmc-container__description {
+    border-radius: 10px; /* Rounds the corners of the container. */
+    padding: 2rem; /* Adds padding inside the container. */
+    margin: 2rem auto; /* Centers the container and adds margin around it. */
+    max-width: 1200px; /* Limits the width of the container. */
+    position: relative; /* Allows for absolute positioning within. */
+    text-align: center; /* Centers the text inside the container. */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for shadow and movement. */
+}
+
+/* Adds a hover effect to the description container, elevating it visually and adding a shadow for depth. */
+.bmc-container__description:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Creates a soft shadow around the container. */
+    transform: translateY(-5px); /* Moves the container up slightly for a "lifted" effect. */
+}
+
+/* Styling for text and list items within the container. Sets the font colur, size, and line height for readability. */
+.bmc-container__text,
+.bmc-container__list,
+.bmc-container__list-item {
+    color: #4A4A4A; /* Dark grey colour for text. */
+    font-size: 1.2rem; /* Slightly larger font size for readability. */
+    line-height: 1.7; /* Adjusts spacing between lines of text. */
+}
+
+/* Styling for lists within the container. Adjusts the list style and padding. */
+.bmc-container__list {
+    list-style: inside; /* Positions the list bullet inside the list item. */
+    padding-left: 1rem; /* Adds padding to the left of the list for alignment. */
+}
+
+/* Styling for list items. Adds bottom margin for spacing between items. */
+.bmc-container__list-item {
+    margin-bottom: 0.5rem; /* Adds spacing below each list item. */
+    position: relative; /* Allows for positioning of pseudo-elements. */
+}
+
+/* Styling for list items with strong emphasis. Sets the font colour to black for highlighted items. */
+.bmc-container__list-item__strong strong {
+    color: #000000; /* Black colour for emphasis. */
+}
+
+/* Additional styling for strong list items. Removes list style and adjusts bottom margin. */
+.bmc-container__list-item__strong {
+    list-style-type: none; /* Removes the bullet point. */
+    margin-bottom: 0.5rem; /* Adds spacing below the item. */
+}
+
+/* Adjusts font size for regular and strong list items for consistency. */
+.bmc-container__list-item, .bmc-container__list-item__strong{
+    font-size: 1rem; /* Standardises font size. */
+}
+
+/* Grid layout styling for the business model canvas section. */
+.bmc-business-model-canvas {
+    display: grid; /* Enables grid layout. */
+    grid-template-columns: repeat(5, 1fr); /* Defines five equal-width columns. */
+    grid-template-rows: auto auto minmax(150px, auto); /* Defines row sizes with a minimum height. */
+    gap: 20px; /* Sets spacing between grid items. */
+    max-width: 1200px; /* Limits the width of the grid. */
+    margin: 40px auto; /* Centers the grid and adds vertical margin. */
+    color: #030F28; /* Dark blue colour for text. */
+    text-align: center; /* Centers text within the grid items. */
+}
+
+/* Additional grid section styling. */
+.bmc-business-model-canvas .bmc-section {
+    position: relative; /* Allows for absolute positioning of child elements. */
+}
+
+/* Styling for individual boxes within the grid. Includes background colour, border, and shadow for depth. */
+.bmc-business-model-canvas .bmc-box {
+    background: #ffffff; /* White background for contrast. */
+    border: 2px solid #030F28; /* Dark blue border for definition. */
+    border-radius: 12px; /* Rounded corners for a softer look. */
+    padding: 20px; /* Internal padding for content spacing. */
+    box-shadow: 0 4px 10px rgba(3, 15, 40, 0.2); /* Soft shadow for depth. */
+    display: flex; /* Enables flex layout for content alignment. */
+    flex-direction: column; /* Stacks child elements vertically. */
+    justify-content: center; /* Centers content vertically within the box. */
+    margin-bottom: 0; /* Removes bottom margin for consistent spacing. */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects. */
+}
+
+/* Reiterates colour and text alignment for the business model canvas for consistency. */
+.bmc-business-model-canvas{
+    color: #030F28; /* Dark blue for text consistency. */
+    text-align: center; /* Ensures text is centered within the grid. */
+}
+
+/* Styles for headings within .bmc-box elements. Sets the text colour, alignment, and bottom margin. */
+.bmc-box h3 {
+    color: #030F28; /* Dark blue for consistency with the overall design theme. */
+    text-align: center; /* Ensures titles are centered. */
+    margin-bottom: 15px; /* Adds space below the title for visual separation. */
+}
+
+/* Styles for .bmc-section-title. Adjusts font size, text colour, alignment, and background color. */
+.bmc-section-title {
+    font-size: 0.8rem; /* Smaller font size for subsection titles. */
+    color: #030F28; /* Dark blue for visual consistency. */
+    text-align: center; /* Centers text. */
+    background-color: #ffffff; /* White background for contrast. */
+}
+
+/* Main title styles within the Business Model Canvas. Sets font size and colour. */
+.bmc-title {
+    font-size: 1.5rem; /* Larger font size for main titles to stand out. */
+    color: #5EC3E5; /* Light blue for a distinctive look. */
+}
+
+/* Styles for titles related to costs and revenue. Adjusts font size, margin, and padding for layout and spacing. */
+.bmc-cost-title,
+.bmc-money-title {
+    font-size: 1.2rem; /* Slightly smaller font size for subtlety. */
+    margin-bottom: 0; /* Removes space below to bring titles closer to content. */
+    padding-top: 10px; /* Adds space above for visual balance. */
+}
+
+/* Grid layout adjustments for the cost title, spanning the first two columns. */
+.bmc-cost-title {
+    grid-column: 1 / span 2; /* Occupies the first two columns. */
+    grid-row: 2; /* Positions in the second row. */
+}
+
+/* Grid layout adjustments for the money title, spanning the last two columns. */
+.bmc-money-title {
+    grid-column: 4 / span 2; /* Occupies the last two columns. */
+    grid-row: 2; /* Positions in the second row. */
+}
+
+/* Styles for the cost-incuring section with a dotted border, padding, and grid positioning. */
+.bmc-section.bmc-cost-incuring {
+    grid-column: 1 / span 2; /* Occupies the first two columns. */
+    grid-row: 3; /* Positions in the third row. */
+    border: 2px dotted #030F28; /* Dotted border for a distinct visual cue. */
+    padding: 20px; /* Internal padding for content spacing. */
+    padding-top: 10px; /* Additional top padding for balance. */
+}
+
+/* Margin adjustments for boxes within cost-incuring and money-making sections. */
+.bmc-section.bmc-cost-incuring .bmc-box,
+.bmc-section.bmc-money-making .bmc-box {
+    margin-bottom: 10px; /* Adds space below each box for separation. */
+}
+
+/* Removes bottom margin for the last box in each section for a cleaner layout. */
+.bmc-section.bmc-cost-incuring .bmc-box:last-child,
+.bmc-section.bmc-money-making .bmc-box:last-child {
+    margin-bottom: 0; /* Eliminates space below the last box. */
+}
+
+/* Styles for the money-making section similar to the cost-incuring section but positioned differently in the grid. */
+.bmc-section.bmc-money-making {
+    grid-column: 4 / span 2; /* Occupies the last two columns. */
+    grid-row: 3; /* Positions in the third row. */
+    border: 2px dotted #030F28; /* Dotted border for visual distinction. */
+    padding: 20px; /* Internal padding for content spacing. */
+    padding-top: 10px; /* Additional top padding for balance. */
+}
+
+/* Grid positioning adjustments based on specific IDs for detailed layout control. */
+#bmc-key-partners,
+#bmc-customer-segments {
+    grid-row: 1 / span 2; /* Allows these elements to span the first two rows for prominence. */
+}
+
+#bmc-key-resources, #bmc-key-activities,
+#bmc-customer-relations, #bmc-channels {
+    grid-row: 3; /* Positions these elements in the third row for organisational clarity. */
+}
+
+#bmc-value-proposition {
+    grid-row: 3; /* Positions in the third row. */
+    grid-column: 3; /* Centers in the third column for emphasis. */
+}
+
+#bmc-cost-structure {
+    grid-row: 4; /* Positions in the fourth row. */
+    grid-column: 1 / span 2; /* Spans the first two columns for visibility. */
+}
+
+#bmc-revenue-streams {
+    grid-row: 4; /* Positions in the fourth row. */
+    grid-column: 4 / span 2; /* Occupies the last two columns for alignment with revenue-related content. */
+}
+
+/* Enhances hover state for .bmc-box elements with a colour change, lift effect, and deeper shadow for interactivity. */
+.bmc-business-model-canvas .bmc-box:hover {
+    border-color: #5EC3E5; /* Changes border colour to light blue for visual feedback. */
+    transform: translateY(-5px); /* Creates a subtle lift effect for a dynamic interaction. */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Intensifies the shadow for a more pronounced hover effect. */
+}
+
+/* Responsive design adjustments for tablets and smaller devices, optimising padding, margin, and font sizes. */
+@media (max-width: 1024px) {
+    /* Adjusts padding and margin for the description container for better space usage. */
+    .bmc-container__description {
+      padding: 1.5rem;
+      margin: 2rem 1rem;
+    }
+  
+    /* Increases font size for section titles for improved readability on smaller screens. */
+    .bmc-container__section-title {
+      font-size: 1.3rem;
+    }
+}
+
+/* Further responsive adjustments for mobile devices, including padding, margin, flex layout for the canvas, and style tweaks for a modern, mobile-friendly appearance. */
+@media (max-width: 768px) {
+    /* Adjusts padding and margin for a tighter, more compact layout on mobile devices. */
+    .bmc-container__description {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    /* Slightly reduces font size for section titles to fit mobile screen constraints. */
+    .bmc-container__section-title {
+        font-size: 1.2rem;
+    }
+
+    /* Reduces horizontal padding within the container for more screen space utilisation. */
+    .bmc-container {
+        padding: 0 15px;
+    }
+
+    /* Adjustments to the main title size and spacing for mobile screens. */
+    .bmc-container__main-title {
+        font-size: 2rem; /* Enhances visibility of the main title. */
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    /* Switches the business model canvas layout to flex for better control and simplicity on mobile. */
+    .bmc-business-model-canvas {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Adds spacing between items for clarity. */
+    }
+
+    /* Adjusts styles for cost-incuring and money-making sections for a cleaner, more modern mobile appearance. */
+    .bmc-section.bmc-money-making,
+    .bmc-section.bmc-cost-incuring {
+        padding: 15px;
+        border-radius: 12px; /* Softens the visual impact with rounded corners. */
+        margin-bottom: 15px; /* Ensures adequate spacing between sections. */
+        box-shadow: none; /* Opt for a flatter design by removing shadows. */
+    }
+
+    /* Fine-tunes the box styles for a cohesive, mobile-friendly design. */
+    .bmc-box {
+        border-radius: 12px; /* Maintains rounded corner styling for consistency. */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Applies a lighter shadow for subtlety. */
+        border: 2px solid #f0f0f0; /* Chooses a light border colour for a softer visual effect. */
+        margin-bottom: 20px; /* Increases spacing for clear separation between elements. */
+    }
+
+    /* Special styling for the Value Proposition box to highlight its importance with colour, shadow, and positioning adjustments. */
+    .bmc-box.bmc-large#bmc-value-proposition {
+        background-color: #e8f4fd; /* Light blue background distinguishes this box as focal. */
+        border: 3px solid #0056b3; /* Solid blue border for emphasis. */
+        box-shadow: 0 4px 12px rgba(0, 86, 179, 0.2); /* Applies a deeper shadow for a more pronounced 'lift'. */
+        position: relative; /* Enables positioning of pseudo-elements and stacking context. */
+        z-index: 1; /* Ensures this element overlaps others as needed. */
+        margin-top: 50px; /* Overlaps slightly with the element above for visual layering. */
+        margin-bottom: 50px; /* Separates from subsequent content for focus. */
+    }
+
+    /* Modernises titles with background, shadow, and layout adjustments for a more engaging mobile presentation. */
+    .bmc-title, .bmc-cost-title, .bmc-money-title {
+        background-color: #f0f0f0; /* Slight off-white for a fresh background. */
+        border-radius: 12px; /* Rounded corners for a friendly, approachable look. */
+        padding: 10px 20px; /* Provides internal space for content breathing room. */
+        margin: 0 auto 15px; /* Centers titles and adds space below for separation. */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth without overwhelming. */
+        max-width: 80%; /* Constrains width for focused, legible titles. */
+    }
+
+    /* Utilises the order property to control the layout flow in a flex context, enhancing the mobile experience. */
+    .bmc-money-title {
+        order: 1;
+    }
+    .bmc-section.bmc-money-making {
+        order: 2;
+    }
+    .bmc-box.bmc-large#bmc-revenue-streams {
+        order: 3;
+    }
+    .bmc-box.bmc-large#bmc-value-proposition {
+        order: 4;
+    }
+    .bmc-cost-title {
+        order: 5;
+    }
+    .bmc-section.bmc-cost-incuring {
+        order: 6;
+    }
+    .bmc-box.bmc-large#bmc-cost-structure {
+        order: 7;
+    }
+}

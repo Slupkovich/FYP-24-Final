@@ -1,0 +1,97 @@
+/* Styles for the entire About Section */
+.hp-about-sec {
+  background-color: #030F28; /* Dark navy blue background */
+  padding: 100px 0; /* Vertical padding to create space around the content */
+  border-top: 2px solid #ececec; /* Light grey border on top for a subtle separation */
+  color: white; /* White text color for high contrast */
+  transition: all 0.5s ease-in-out; /* Smooth transition for any changes */
+  display: flex; /* Enables flexbox layout for centering content */
+  justify-content: center; /* Centers content horizontally within the section */
+  align-items: center; /* Centers content vertically within the section */
+}
+
+/* Container for the inner content of the about section */
+.hp-about-sec__container {
+  width: 100%; /* Full width to utilize the space */
+  padding: 0 20px; /* Horizontal padding for inner spacing */
+  text-align: center; /* Center aligns all the text within the container */
+}
+
+/* Styles for the title in the about section */
+.hp-about-sec__title {
+  font-size: 36px; /* Large font size for visibility */
+  margin-bottom: 2rem; /* Space below the title */
+  color: #ffffff; /* White color for the text */
+  position: relative; /* Relative positioning for pseudo-elements */
+  display: inline-block; /* Block behavior but only as wide as its content */
+}
+
+/* Decorative underline for the title */
+.hp-about-sec__title::after {
+  content: ''; /* Necessary for a pseudo-element */
+  display: block; /* Block level to allow width and height */
+  width: 100%; /* Full width of the element */
+  height: 3px; /* Height of the underline */
+  background: #4db2d6; /* Bright blue color for the line */
+  margin: 8px auto 0; /* Margin to position centrally below the title */
+}
+
+/* Styles for the description box resembling a card */
+.hp-about-sec__description {
+  background-color: #ffffff; /* White background for contrast */
+  padding: 2rem; /* Padding for space inside the card */
+  border-radius: 10px; /* Rounded corners for a smoother look */
+  line-height: 1.6; /* Spacing between lines of text */
+  font-size: 18px; /* Font size for readability */
+  color: #030F28; /* Dark text color for contrast */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for 3D effect */
+  max-width: 600px; /* Maximum width to maintain layout */
+  margin: auto; /* Centering the card horizontally */
+  list-style-type: none; /* No bullets on lists */
+}
+
+/* Styles for individual list items within the description */
+.hp-about-sec__description li {
+  background: rgba(255, 255, 255, 0.1); /* Subtle background for readability */
+  margin-bottom: 20px; /* Bottom margin for spacing */
+  padding: 15px; /* Padding for content inside list items */
+  border-radius: 10px; /* Rounded corners for list items */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions for hover effects */
+  list-style: none; /* No bullets */
+  display: inline-flex; /* Flex layout for items */
+  align-items: center; /* Vertically center the content of list items */
+  justify-content: center; /* Horizontally center the content */
+  width: fit-content; /* Width according to content size */
+}
+
+.hp-about-sec__description ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Hover effects for list items */
+.hp-about-sec__description li:hover {
+  transform: translateY(-5px); /* Lift the item slightly on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Deeper shadow for a "raised" effect */
+}
+
+/* Styling for icons in the list */
+.hp-about-sec__description svg {
+  font-size: 30px; /* Large size for visibility */
+  margin-right: 15px; /* Space between icon and text */
+  color: #5EC3E5; /* Matching blue color for consistency with the underline */
+  margin-top: -4px; /* Adjust alignment */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hp-about-sec__title {
+    font-size: 28px; /* Slightly smaller font size for smaller screens */
+  }
+
+  .hp-about-sec__description {
+    font-size: 16px; /* Smaller font size for better readability */
+    padding: 1.5rem; /* Smaller padding for tighter spaces */
+  }
+}

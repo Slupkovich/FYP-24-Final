@@ -1,0 +1,43 @@
+.revenueModels {
+    background: linear-gradient(#030F28, #020C22); /* Dark background gradient */
+    color: #ffffff; /* White text color */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.title {
+    color: #5EC3E5; /* Bright Sky Blue */
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.content .highlight {
+    color: #4db2d6; /* Slightly Darker Sky Blue */
+    font-weight: bold;
+}
+
+.question {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.answer {
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .revenueModels {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+}

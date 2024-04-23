@@ -1,0 +1,109 @@
+/* Styling for the section containing module progress elements */
+.module-progress-section {
+  background-color: #ffffff; /* Sets the background color to white */
+  padding: 100px 0; /* Provides vertical padding */
+  border-top: 2px solid #ececec; /* Adds a subtle grey border at the top */
+  transition: all 0.3s ease; /* Ensures smooth transitions */
+}
+
+/* Container for module progress content, centered and constrained for readability */
+.module-progress-container {
+  width: 100%; /* Full width */
+  max-width: 960px; /* Maximum width to maintain content readability */
+  padding: 0 20px; /* Padding for inner spacing */
+  text-align: center; /* Centers the text inside the container */
+  margin: auto; /* Auto margins for centering */
+  position: relative; /* Enables absolute positioning for children */
+}
+
+/* Styling for the quiz invitation text */
+.module-progress__quiz-text {
+  color: #030F28; /* Dark blue for visibility */
+  font-size: 36px; /* Larger font size for emphasis */
+  margin: 0 auto; /* Horizontally centers the block */
+  margin-bottom: 2rem; /* Space below the text */
+  position: relative; /* Context for positioning pseudo-elements */
+  display: inline-block; /* Allows the element to size with its content */
+}
+
+/* Decorative line below the quiz invitation text */
+.module-progress__quiz-text::after {
+  content: ''; /* Necessary for the element to display */
+  display: block; /* Block level for width control */
+  height: 3px; /* Height of the line */
+  background-color: #5EC3E5; /* Light blue for thematic consistency */
+  position: absolute; /* Positioned relative to its parent */
+  left: 0; 
+  right: 0;
+  bottom: -10px; /* Positioned below the text */
+  margin: 0 auto; /* Centers the line */
+}
+
+/* Container for navigation buttons, facilitating center alignment and spacing */
+.module-progress__button-container {
+  display: flex; /* Enables flexible box layout */
+  justify-content: center; /* Centers the buttons horizontally */
+  gap: 20px; /* Space between buttons */
+}
+
+/* Styling for the button to proceed to the next module or section */
+.module-progress__button--next {
+  background-color: #5EC3E5; /* Light blue background */
+  color: white; /* White text for contrast */
+  border: none; /* No border for a clean appearance */
+  padding: 15px 30px; /* Padding for size and comfort */
+  font-size: 1.1rem; /* Slightly larger font size for readability */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  cursor: pointer; /* Cursor indicates button functionality */
+  transition: all 0.3s; /* Smooth transition for hover and focus states */
+  text-decoration: none; /* Removes any underlines */
+  display: inline-block; /* Allows the button to sit inline with text */
+}
+
+/* Hover and focus states for the next button, enhancing interactivity */
+.module-progress__button--next:hover,
+.module-progress__button--next:focus {
+  background-color: #4db2d6; /* Slightly darker blue for visual feedback */
+  outline: none; /* Removes the outline to maintain visual consistency */
+  transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+/* Styling for the quiz button, including a gradient background and shadow for depth */
+.module-progress__quiz-button {
+  background: linear-gradient(180deg, #41a7e0, #5EC3E5);
+  color: white; /* White text for contrast */
+  border: 1px solid #4db2d6; /* Border for definition */
+  padding: 15px 30px; /* Padding for size and comfort */
+  font-size: 1.1rem; /* Slightly larger font size for readability */
+  border-radius: 50px; /* Rounded corners for a pill shape */
+  cursor: pointer; /* Cursor indicates button functionality */
+  transition: all 0.3s; /* Smooth transition for hover and focus states */
+  margin-bottom: 2rem; /* Space below the button */
+  box-shadow: 0px 8px 15px rgba(94, 195, 229, 0.3); /* Subtle shadow for depth */
+  display: block; /* Block display for width control */
+  margin-left: auto; /* Centers the button horizontally */
+  margin-right: auto; /* Centers the button horizontally */
+}
+
+/* Hover and focus states for the quiz button, including shadow and movement effects */
+.module-progress__quiz-button:hover,
+.module-progress__quiz-button:focus {
+  background: linear-gradient(180deg, #5EC3E5, #41a7e0); /* Reverse the gradient for a subtle, yet noticeable change */
+  box-shadow: 0px 8px 20px rgba(2, 12, 34, 0.5); /* Enhanced shadow for emphasis */
+  transform: translateY(-2px) scale(1.02); /* Slight elevation and enlargement */
+  outline: none; /* Removes the outline to maintain visual consistency */
+}
+
+/* Media query adjustments for smaller screens */
+@media (max-width: 768px) {
+  .module-progress__button-container {
+    flex-direction: column; /* Stacks buttons vertically */
+  }
+
+  .module-progress__button--next {
+    padding: 10px 20px; /* Adjusted padding for smaller screens */
+    font-size: 1rem; /* Adjusted font size for smaller screens */
+    width: 100%; /* Full width for easier tapping on touch devices */
+    margin-bottom: 10px; /* Space between stacked buttons */
+  }
+}

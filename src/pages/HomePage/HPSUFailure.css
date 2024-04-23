@@ -1,0 +1,109 @@
+/* Styles for the entire section dedicated to startup failure/success statistics */
+.hpsu-failure-section {
+  background-color: #030F28; /* Dark navy blue background */
+  padding: 100px 0; /* Significant vertical padding for spacing */
+  border-top: 2px solid #ececec; /* Light grey top border for visual separation */
+  color: white; /* White text color for readability */
+  transition: all 0.5s ease-in-out; /* Smooth transition for any hover effects */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+}
+
+/* Container for the textual content and statistics */
+.hpsu-failure__content-wrapper {
+  width: 100%; /* Full width to use all available space */
+  padding: 0 37px; /* Horizontal padding for internal spacing */
+  text-align: center; /* Center all text within the wrapper */
+}
+
+/* Title styling */
+.hpsu-failure__title {
+  font-size: 36px; /* Large font size for prominence */
+  margin-bottom: 2rem; /* Space below the title */
+  color: #ffffff; /* Explicitly set text color to white for consistency */
+  position: relative; /* Positioning context for pseudoelements */
+  display: inline-block; /* Block level but only as wide as its content */
+}
+
+/* Decorative underline for the title */
+.hpsu-failure__title::after {
+  content: ''; /* Required for the pseudo-element to display */
+  display: block; /* Block-level element */
+  width: 100%; /* Match the width of the title */
+  height: 3px; /* Thickness of the underline */
+  background: #4db2d6; /* Light blue to match branding */
+  margin-top: 8px; /* Spacing between the title text and the underline */
+}
+
+/* Paragraph styling within the section */
+.hpsu-failure-section p {
+  font-size: 1.2rem; /* Size for readability */
+  margin-bottom: 35px; /* Spacing below paragraphs */
+  color: #ffffff; /* White color for contrast */
+}
+
+/* Wrapper for statistical display including the counter */
+.hpsu-failure__statistic-wrapper {
+  position: relative; /* For absolute positioning of children if necessary */
+  margin-bottom: 40px; /* Space below before next content block */
+}
+
+/* Styling for the animated counter */
+.hpsu-failure__counter {
+  font-size: 4rem; /* Very large font size for emphasis */
+  font-weight: bold; /* Bold text for impact */
+  color: #5EC3E5; /* Brand color for emphasis */
+  margin-bottom: 15px; /* Space below the counter */
+}
+
+/* Base styling for the progress bar background */
+.hpsu-failure__progress-bar {
+  width: 100%; /* Full container width */
+  height: 20px; /* Fixed height for the bar */
+  background-color: #ddd; /* Grey background, shows progress extent */
+  border-radius: 10px; /* Rounded corners for aesthetics */
+  overflow: hidden; /* Ensures no content spills outside the border */
+}
+
+/* Dynamic part of the progress bar */
+.hpsu-failure__progress {
+  width: 0; /* Start with no visible progress */
+  height: 100%; /* Full height of the container */
+  background-color: #5EC3E5; /* Brand color for progress indicator */
+  border-radius: 10px; /* Maintain rounded corners */
+  transition: width 2s ease-in-out; /* Smooth transition for width changes */
+  animation: fillProgress 2s ease-in-out forwards; /* Animation to visually fill the bar */
+}
+
+/* Call-to-action button styling */
+.hpsu-failure__cta-button {
+  background-color: #5EC3E5; /* Brand color */
+  color: white; /* Text color for readability */
+  border: none; /* No border for a clean look */
+  padding: 15px 30px; /* Padding for a good clickable area */
+  font-size: 1.2rem; /* Font size for visibility */
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer; /* Pointer to indicate interactivity */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions for interaction */
+  text-transform: uppercase; /* Uppercase text for stylistic choice */
+  font-weight: 600; /* Semi-bold for emphasis */
+  margin-bottom: 20px; /* Space below button */
+}
+
+/* Modify the CTA button's appearance on hover to draw attention */
+.hpsu-failure__cta-button:hover {
+background-color: #4db2d6; /* Lighten the background colour to signify interactivity */
+transform: translateY(-2px); /* Slightly elevate the button to create a press-down effect */
+}
+
+/* Define animation keyframes for the progress bar filling effect */
+@keyframes fillProgress {
+from { width: 0; } /* Start with the progress bar empty */
+to { width: 25%; } /* End with the progress bar filled to 25% to indicate progress */
+}
+
+/* Ensure the fillProgress animation is correctly applied to the progress bar */
+.hpsu-failure__progress-bar .hpsu-failure__progress {
+animation: fillProgress 8s ease-in-out forwards; /* Apply the fillProgress animation over 8 seconds for a smooth visual effect */
+}

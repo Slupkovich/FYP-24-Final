@@ -1,0 +1,171 @@
+/* Section containing critiques, styled for central alignment and background */
+.critiques-sec{
+    background-color: #ffffff; /* I set a white background for clarity */
+    padding: 50px 0px; /* Uniform vertical padding */
+    border-top: 2px solid #ececec; /* Subtle top border for visual separation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease; /* Smooth transition effects for any changes */
+}
+
+/* Main container for critique items, defining text and background settings */
+.critiques {
+    color: #030F28; /* Dark blue for text to ensure good readability */
+    background: #ffffff;
+    padding: 40px; /* Padding around the content */
+    border-radius: 12px; /* Rounded corners for a softer look */
+    margin: 40px auto; /* Centered with margin on all sides */
+    max-width: 960px; /* Maximum width for better content management */
+    line-height: 1.8; /* Increased line height for readability */
+    text-align: center; /* Text centered within the container */
+}
+
+/* Styling for the title within the critiques section */
+.critiques__title {
+    margin-bottom: 32px; /* Space below the title */
+    position: static; /* Title positioned statically */
+    padding-bottom: 10px; /* Padding below the text */
+    text-align: center;
+    display: inline-block; /* Allows the title to only take up necessary space */
+}
+
+/* Additional styling for the span within the title for underlining */
+.critiques__title span {
+    position: relative; /* Span holds position for pseudo-elements */
+    display: inline-block; /* Inline block for alignment with text */
+}
+
+/* Pseudo-element for underline effect under the title span */
+.critiques__title span::after {
+    content: '';
+    display: block;
+    height: 2px; /* Subtle height for the underline */
+    background-color: #5EC3E5; /* Thematic blue for visual consistency */
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%; /* Full width of the span for complete underlining */
+}
+
+/* Container styling for holding individual critique boxes */
+.critiques__container {
+    display: flex;
+    flex-direction: column; /* Stack critiques vertically */
+    align-items: center; /* Center-align items for consistency */
+    gap: 20px; /* Space between each critique box */
+}
+
+/* Individual critique boxes with conditional hover effects */
+.critiques__box {
+    background-color: #ffffff;
+    border-radius: 8px; /* Slightly rounded corners for style */
+    padding: 1.5rem; /* Padding inside each box for spacing */
+    width: 100%; /* Full width to use available space */
+    margin-bottom: 2rem; /* Bottom margin for spacing between boxes */
+    overflow: visible; /* Ensures shadows aren't cut off */
+    transition: all 0.3s ease; /* Smooth transitions for interactive effects */
+}
+
+/* Hover effects to enhance interactivity */
+.critiques__box:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Shadow for depth perception on hover */
+    transition: all 0.3s ease; /* Maintain smooth transition on hover */
+    transform: scale(1.02); /* Slight scale to indicate selection */
+}
+
+/* Ensures smooth transition when not hovering */
+.critiques__box:not(:hover) {
+    transition: all 0.3s ease; /* Smooth reverse transition */
+}
+
+/* Styling for the quote within each critique box */
+.critiques__quote {
+    font-size: 1.25rem; /* Larger size for emphasis */
+    font-weight: 600; /* Bold weight to highlight quotes */
+    margin-bottom: 1.5rem; /* Space below the quote */
+    position: relative; /* Needed for pseudo-elements */
+}
+
+/* Pseudo-elements for decorative quotes */
+.critiques__quote::before,
+.critiques__quote::after {
+    content: '"';
+    color: #5EC3E5; /* Thematic blue for visual consistency */
+    font-size: 2rem; /* Large size for visual impact */
+    line-height: 0;
+    vertical-align: 0em; /* Aligns quote marks with the text */
+}
+
+/* Styling for the reference under each quote */
+.critiques__reference {
+    font-size: 0.9rem; /* Smaller font size for hierarchy */
+    font-weight: 400; /* Lighter weight for less emphasis */
+    color: #999999; /* Grey for subtlety */
+    margin-bottom: 2rem; /* Space after the reference for separation */
+}
+
+/* Applies a subtle separator after references, except for the last item in a critique box */
+.critiques__box:not(:last-child) .critiques__reference::after {
+    content: '';
+    display: block;
+    height: 1px; /* Thin line for a clean separation */
+    background-color: #ececec; /* Light grey for subtlety */
+    margin-top: 1rem; /* Space above the line */
+    margin-bottom: 1rem; /* Space below the line */
+}
+
+/* Styling for images in a critique box with an image */
+.critiques__box--with-image .critiques__image {
+    background-size: contain; /* Ensures the image fits within the container */
+    background-repeat: no-repeat; /* No repetition of image */
+    width: 100%; /* Full width to align with the container */
+    height: auto; /* Height adjusts to the image */
+    padding-bottom: 56.25%; /* Aspect ratio to maintain image dimensions */
+    margin-top: 1.5rem; /* Space between the quote and the image */
+    border-radius: 8px; /* Rounded corners to match the box */
+}
+
+/* Common styling for critiques quotes and references */
+.critiques__quote, .critiques__reference {
+    white-space: normal; /* Ensures text wraps normally */
+    overflow: visible; /* Content can extend beyond the box */
+    text-overflow: clip; /* Prevents text from being clipped */
+    max-height: none; /* No maximum height restriction */
+    margin: 0 auto; /* Centers content horizontally */
+    padding: 10px; /* Padding around text for readability */
+    font-size: 1rem; /* Standard font size for text */
+    line-height: 1.8; /* Line height for improved readability */
+}
+
+/* Media query for desktops and larger devices */
+@media (min-width: 1024px) {
+    .critiques__container {
+        flex-direction: row; /* Items displayed in a row */
+        flex-wrap: wrap; /* Allows items to wrap as needed */
+        align-items: flex-start; /* Align items to the start of the flex container */
+        justify-content: center; /* Centered content within the container */
+    }
+
+    .critiques__box {
+        flex: 1 1 auto; /* Flexibility in growth and shrinkage */
+        margin: 10px; /* Margin around each box */
+    }
+
+    /* Special styling for the first and second last critique box */
+    .critiques__box:first-child, .critiques__box:nth-last-child(2) {
+        flex: 0 0 100%; /* No flexibility and takes full width */
+    }
+
+    /* Adjusts height for images in critique boxes with images on larger screens */
+    .critiques__box--with-image .critiques__image {
+        height: 300px; /* Fixed height for consistency */
+    }
+}
+
+/* Media query for smaller devices */
+@media (max-width: 767px) {
+    .critiques__box--with-image .critiques__image {
+        height: 200px; /* Smaller fixed height for better display on mobile devices */
+    }
+}

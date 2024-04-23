@@ -1,0 +1,123 @@
+/* Container to center the login form vertically and horizontally */
+.uniqueLoginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #030F28; /* Dark blue background for contrast */
+}
+
+/* Styling for displaying error messages in the form */
+.errorMessage {
+    color: red; /* Alerts are red for visibility */
+    text-align: center; /* Centre-align text to ensure it's in the middle */
+}
+
+/* Styles for the login form itself */
+.uniqueLoginForm {
+    display: flex;
+    flex-direction: column; /* Stack the children vertically */
+    align-items: center;
+    justify-content: center; /* Center content vertically in the form */
+    background-color: #ffffff; /* White background for the form */
+    padding: 20px; /* Spacing inside the form */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+    width: 325px;
+    max-width: 400px; /* Maximum width to ensure form doesn't stretch too wide */
+}
+
+/* Close button in the top-right corner of the form */
+.uniqueCloseButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer; /* Indicates it's clickable */
+    font-size: 30px; /* Larger font for better visibility */
+    color: #ffffff; /* White color for contrast against dark background */
+}
+
+/* Styling for the logo inside the login form */
+.uniqueLogo img {
+    width: 160px; /* Fixed width for consistency */
+    margin-bottom: 20px; /* Spacing below the logo */
+}
+
+/* Styling for the login text header */
+.loginText {
+    text-align: center; /* Center-align text */
+    font-size: 30px; /* Large text for emphasis */
+    font-weight: bold; /* Bold text for emphasis */
+    margin-bottom: 20px; /* Spacing before the form fields */
+}
+
+/* Styling for each input group */
+.uniqueInputGroup {
+    width: 100%;
+    margin-bottom: 20px; /* Spacing between each input group */
+    display: flex;
+    justify-content: center; /* Center-align the input groups */
+}
+
+/* Specific styles for each input within a group */
+.uniqueInputGroup input {
+    width: 100%; /* Full width of its container */
+    max-width: 500px; /* Maximum width allowed for larger screens */
+    padding: 15px; /* Padding inside the input for text spacing */
+    border: 2px solid #5EC3E5; /* Blue border for visual appeal */
+    border-radius: 20px; /* Rounded corners for a modern look */
+    font-size: 18px; /* Slightly larger font for readability */
+    outline: none; /* Removes outline on focus for a cleaner look */
+    text-align: center; /* Center the text inside */
+    margin: 5px 0; /* Vertical spacing for separation */
+}
+
+/* Link styles within the form */
+.uniqueLinks {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Ensure links are centered for better layout */
+    margin-bottom: 30px; /* Spacing below links */
+}
+
+.uniqueLinks a, .uniqueSignUpLink {
+    color: #5EC3E5; /* Blue colour for visual consistency */
+    text-decoration: none; /* No underline to keep it clean */
+    font-size: 14px; /* Standard font size for links */
+    cursor: pointer; /* Indicates link is clickable */
+}
+
+/* Hover effect for sign-up link to indicate interactivity */
+.uniqueSignUpLink:hover {
+    text-decoration: underline; /* Underline on hover for emphasis */
+}
+
+/* Button styles within the form */
+.uniqueLoginForm button {
+    width: 100%;
+    max-width: 300px; /* Consistent width with input fields */
+    padding: 12px 0; /* Padding for height */
+    background-color: #5EC3E5; /* Blue background to match theme */
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners for soft look */
+    color: white; /* White text for contrast */
+    cursor: pointer; /* Indicates button is clickable */
+    font-size: 16px; /* Readable font size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the button */
+.uniqueLoginForm button:hover {
+    background-color: #4db2d6; /* Lighter blue on hover for visual feedback */
+}
+
+/* Styles for the 'forgot password' link */
+.uniqueForgotPassword {
+    display: block; /* Block display to occupy its own line */
+    color: #030F28; /* Dark text for readability */
+    text-decoration: underline; /* Underlined to indicate it's clickable */
+    cursor: pointer; /* Indicates interactivity */
+    margin: 20px 0; /* Spacing around link */
+    font-size: 15px; /* Slightly larger font for emphasis */
+    text-align: center; /* Center-align text for consistency with other text elements */
+}

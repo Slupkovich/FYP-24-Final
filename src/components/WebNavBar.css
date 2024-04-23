@@ -1,0 +1,334 @@
+/* Main navbar styles */
+.web-nav {
+  background-color: #030F28; /* Dark blue background */
+  padding: 10px 60px; /* Padding for breathing space around elements */
+  display: flex;
+  align-items: center; /* Vertically align items in the navbar */
+  justify-content: space-between; /* Space out the logo, navigation menu, and account button */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-bottom: 1px solid white; /* White border for visual separation */
+}
+
+/* Logo styling */
+.full-logo  {
+  height: 175px; /* Fixed height for consistency */
+  width: auto; /* Width automatically adjusted to maintain aspect ratio */
+  display: block; /* Block display to respect width and height */
+}
+
+.mobile-logo {
+  display: none; /* Hide mobile logo by default */
+}
+
+/* Centering the navigation menu */
+.web-nav__container {
+  display: flex;
+  justify-content: center; /* Center the items in the container */
+  flex-grow: 1; /* Grow to use available space */
+  padding: 0 15px; /* Add padding to prevent titles from touching the edges */
+}
+
+/* Nav menu styles */
+.web-nav__menu {
+  list-style: none; /* Remove default list styling */
+  display: flex; /* Flexbox for horizontal layout */
+  gap: 25px; /* Space between each menu item */
+  margin: 0; /* Remove default margin */
+  justify-content: center; /* Center align menu items */
+}
+
+/* Nav item styles */
+.web-nav__item {
+  display: flex; /* Flexbox to align link content */
+  align-items: center; /* Center alignment vertically */
+  position: relative; /* Position relative for absolute positioning of dropdowns */
+}
+
+/* Nav links styles */
+.web-nav__link {
+  color: white; /* Text colour */
+  text-decoration: none; /* No underline */
+  padding: 10px 20px; /* Padding for hit area and aesthetics */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1.25rem; /* Font size for readability */
+  font-weight: 600; /* Font weight for emphasis */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Highlight active navigation link */
+.web-nav__link--active {
+  color: #5EC3E5; /* Bright sky blue for active state */
+  background-color: transparent;
+  border-bottom: 2px solid #5EC3E5; /* Underline effect for active link */
+  padding-bottom: 8px; /* Adjust padding to accommodate the underline */
+  
+}
+
+/* Custom focus style for active navigation link */
+.web-nav__link--active:focus {
+  outline: 3px solid #030F28; /* Customise focus outline to match the design more subtly */
+}
+
+.web-nav__link:hover {
+  color: #5EC3E5; /* Hover effect to match active link color */
+  background-color: transparent;
+}
+
+.web-nav__link--module-active {
+  border-bottom: 2px solid #5EC3E5; /* Consistent styling for active module links */
+  padding-bottom: 8px; /* Padding to maintain visual consistency */
+}
+
+/* Dropdown Content */
+.web-nav__dropdown-content {
+  display: none; /* Hide dropdown content by default */
+  position: absolute;
+  left: 50%; /* Center dropdown under the parent item */
+  top: 100%; /* Position dropdown directly below the parent item */
+  transform: translateX(-50%); /* Center the dropdown */
+  background-color: #030F28; /* Background color matching navbar */
+  border-radius: 4px; /* Rounded corners for dropdown */
+  min-width: 325px; /* Minimum width for dropdown */
+  box-shadow: 0px 8px 16px 0px rgba(16, 153, 177, 0.2); /* Shadow for depth */
+  z-index: 1; /* Ensure dropdown is above other content */
+}
+
+/* Dropdown item styles */
+.web-nav__dropdown-content .web-nav__dropdown-item {
+  color: white; /* Text color for dropdown items */
+  padding: 10px 20px; /* Padding for dropdown items */
+  border-radius: 4px; /* Rounded corners */
+  margin: 2px 0; /* Vertical spacing for items */
+  text-decoration: none; /* No underline */
+  display: block; /* Block display for width management */
+  text-align: center; /* Center text alignment */
+  transition: all 0.4s ease; /* Smooth transition for hover states */
+}
+
+/* Dropdown item hover */
+.web-nav__dropdown-content .web-nav__dropdown-item:hover {
+  background-color: #5EC3E5; /* Background color on hover */
+  color: #ffffff; /* Text color on hover */
+}
+
+/* Show the dropdown content when hovering */
+.web-nav__item--dropdown:hover .web-nav__dropdown-content,
+.web-nav__item--active .web-nav__dropdown-content {
+  display: block; /* Display dropdown on hover */
+}
+
+/* Dropdown link - hover and active states */
+.web-nav__item--dropdown:hover .web-nav__link,
+.web-nav__item--active .web-nav__link {
+  color: #5EC3E5; /* Hover and active color */
+}
+
+/* Active state for dropdown items */
+.web-nav__dropdown-item.web-nav__link--active {
+  color: #5EC3E5; /* Active state color matching other active links */
+  background-color: transparent; /* No background color for active state */
+}
+
+/* Login/Signup button styles for desktop */
+.web-nav__btn--login-signup.web-nav__btn--desktop-only {
+  background-color: #5EC3E5; /* Bright sky blue background */
+  color: white; /* White text for contrast */
+  font-weight: bold; /* Bold text for emphasis */
+  border-radius: 30px; /* Rounded corners for a friendly, modern look */
+  border: 2px solid transparent; /* Transparent border, could be visible on hover */
+  padding: 10px 25px; /* Adequate padding for clickable area */
+  cursor: pointer; /* Pointer cursor on hover for better user interaction */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+  text-decoration: none; /* No underline to maintain clean look */
+}
+
+/* Login/Signup button hover effect */
+.web-nav__btn--login-signup.web-nav__btn--desktop-only:hover {
+  background-color: white; /* White background on hover */
+  color: #030F28; /* Dark blue text on hover */
+  border-color: #5EC3E5; /* Bright sky blue border on hover */
+}
+
+/* Burger icon styles */
+.web-nav__burger-icon {
+  display: none; /* Hide by default, visible only in mobile view */
+}
+
+/* Mobile burger icon */
+.web-nav__menu--mobile .web-nav__burger-icon {
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-around; /* Even spacing */
+  width: 25px; /* Fixed width */
+  height: 25px; /* Fixed height */
+}
+
+/* Burger icon lines */
+.web-nav__burger-icon span {
+  display: block; /* Block display for width and height control */
+  width: 100%; /* Full width of the container */
+  height: 2.5px; /* Thin line for minimalist design */
+  background-color: white; /* White color for visibility against dark background */
+}
+
+/* Close button styles */
+.web-nav__menu-close {
+  display: none; /* Hidden by default, shown in mobile view */
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 15px;
+  font-size: 24px; /* Large font size for easier clicking */
+  color: white; /* White color for visibility */
+  cursor: pointer; /* Pointer cursor to indicate clickable */
+}
+
+
+/* Gradual resizing for tablet screens */
+@media screen and (max-width: 1020px) {
+  .web-nav {
+    padding: 10px 30px; /* Smaller padding for a narrower navbar */
+  }
+
+  /* Resize the logo for medium-sized devices */
+  .full-logo {
+    height: 150px; /* Adjust the height slightly smaller */
+  }
+
+  /* Adjust the font size and padding of nav links for medium-sized devices */
+  .web-nav__link {
+    font-size: 1rem; /* Slightly smaller font size */
+    padding: 8px 15px; /* Smaller padding */
+  }
+
+  /* Slightly smaller login/signup button */
+  .web-nav__btn--login-signup {
+    padding: 8px 20px; /* Adjust padding */
+    font-size: 0.9rem; /* Smaller font size */
+  }
+}
+
+/* Adjustments for small tablets and large phones at 768px width */
+@media screen and (max-width: 798px) {
+  .web-nav__btn--desktop-only,
+  .web-nav__my-account-container-desktop {
+    display: none; /* Hide elements not applicable for mobile view */
+  }
+  
+  .full-logo {
+    display: none; /* Hide the full logo in mobile view */
+  }
+
+  .mobile-logo {
+    display: block; /* Show the mobile logo */
+    height: 90px; /* Adjust the mobile logo size */
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .web-nav__menu {
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    position: fixed;
+    transform: translateX(-100%); /* Start off-screen */
+    top: 0;
+    right: 0;
+    flex-direction: column; /* Stack items vertically */
+    padding-top: 150px; /* Spacing from the top */
+    justify-content: flex-start;
+    background-color: #030F28; /* Background matching the navbar */
+    z-index: 100;
+    overflow-y: auto; /* Allow scrolling for overflow content */
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .web-nav__menu--active {
+      display: flex;
+      transform: translateX(0); /* Bring the menu into view */
+      padding-top: 100px;
+  }
+  
+  .web-nav__item {
+    margin-bottom: 15px; /* Space between menu items */
+  }
+  
+  .web-nav__menu-close {
+    display: block; /* Show close button */
+    position: fixed;
+    top: 43px; /* Positioning from the top */
+    right: 40px; /* Positioning from the right */
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 101; /* Above the menu */
+  }
+  
+  .web-nav__link {
+    padding: 15px;
+    font-size: 1.25rem;
+    text-align: center; /* Center text */
+    width: 100%; /* Full width for tap targets */
+    display: block; /* Block display for easier layout control */
+  }
+  
+  .web-nav__my-account-container {
+    display: none; /* Hide by default, shown when menu is active */
+  }
+  
+  /* Styles specific for the "My Account" container in the burger menu */
+  .web-nav__menu--active .web-nav__my-account-container {
+    display: flex; /* Display when menu is active */
+    justify-content: center; /* Center horizontally */
+    width: auto; /* Auto width based on content */
+    padding: 0; /* No padding */
+  }
+  
+  /* Style adjustments for mobile-only login/signup button */
+  .web-nav__btn--login-signup.web-nav__btn--mobile-only {
+  display: block; /* Ensure button is visible inside the off-canvas menu */
+  margin-top: 30px; /* Add space above the button for visual separation */
+  width: 100%; /* Full width to utilize available space */
+  padding: 12px 20px; /* Sufficient padding for easier interaction */
+  border-radius: 30px; /* Rounded corners to match desktop version styling */
+  border: 2px solid transparent; /* Maintain style consistency with the desktop version */
+  background-color: #5EC3E5; /* Use primary color for emphasis */
+  color: #FFFFFF; /* White text for contrast */
+  text-align: center; /* Center-align text for aesthetics */
+  font-size: 1rem; /* Appropriate font size for readability */
+  font-weight: bold; /* Bold font for emphasis */
+  cursor: pointer; /* Pointer to indicate it's clickable */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+  text-decoration: none; /* Remove underline to keep the look clean */
+  }
+  
+  /* Consistent hover styling for login/signup button on both mobile and desktop */
+  .web-nav__btn--login-signup:hover {
+  background-color: white; /* White background on hover for high contrast */
+  color: #030F28; /* Dark text on hover for readability */
+  border-color: #5EC3E5; /* Border color transition to match primary color */
+  }
+  
+  /* Mobile burger icon specific styles */
+  .web-nav__menu--mobile .web-nav__burger-icon,
+  .web-nav__burger-icon {
+  display: flex; /* Display the icon as flex to manage spacing */
+  position: absolute; /* Absolute positioning to place correctly */
+  right: 50px; /* Positioned near the right edge */
+  cursor: pointer; /* Pointer to indicate interactivity */
+  }
+  
+  /* Burger icon lines styling */
+  .web-nav__burger-icon span {
+  transition: all 0.2s ease; /* Smooth transition for any transformations */
+  }
+  
+  /* Hide desktop-only elements on mobile for a cleaner layout */
+  .web-nav__btn--desktop-only {
+  display: none; /* Hide desktop-specific buttons in mobile view */
+  }
+  
+  /* Ensure the mobile button is displayed inside the off-canvas menu */
+  .web-nav__btn--mobile-only {
+  display: block; /* Block display to take full width */
+  }
+}
+

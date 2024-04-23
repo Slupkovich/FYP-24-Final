@@ -1,0 +1,85 @@
+/* Styling for the benefits section */
+.benefits {
+  padding: 100px 40px; /* Provides ample space around the content */
+  background-color: #ffffff; /* Sets the background color to white for clarity */
+  border-top: 2px solid #ececec; /* Adds a subtle grey line at the top for visual separation */
+  display: flex; /* Utilizes Flexbox for layout */
+  flex-direction: column; /* Stacks children elements vertically */
+}
+
+/* Styling for the section title */
+.benefits__title {
+  color: #030F28; /* Dark blue color for the title text */
+  text-align: center; /* Aligns the title text to the center */
+  margin-bottom: 20px; /* Adds space below the title */
+  position: relative; /* Establishes a positioning context for pseudo-elements */
+}
+
+/* Adds a decorative line below the title */
+.benefits__title::after {
+  content: '';
+  display: block; /* Treats the pseudo-element as a block-level element */
+  width: 100%; /* Ensures the line spans the width of the title */
+  height: 3px; /* Sets the height of the line */
+  background-color: #5EC3E5; /* Light blue color for the line */
+  margin: 0 auto; /* Centers the line horizontally */
+  margin-top: 8px; /* Creates space between the title and the line */
+}
+
+/* Grid layout for the benefits items */
+.benefits__grid {
+  display: grid; /* Utilizes CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Creates responsive columns */
+  gap: 20px; /* Adds space between grid items */
+  text-align: center; /* Centers the text inside grid items */
+}
+
+/* Styling for individual benefit items */
+.benefits__item {
+  background-color: #030F28; /* Dark background color for items */
+  padding: 15px; /* Padding inside each item */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for benefit items */
+.benefits__item:hover {
+  transform: translateY(-10px); /* Lifts the item slightly on hover */
+}
+
+/* Styling for the SVG icons used in the benefit items */
+.benefits__item svg {
+  color: #5EC3E5; /* Light blue color for icons */
+  margin-bottom: 10px; /* Space between the icon and the text */
+  font-size: 24px; /* Size of the icon */
+}
+
+/* Text styling within the benefit items */
+.benefits__item p {
+  color: #ffffff; /* White text for contrast against the dark background */
+}
+
+/* Adjustments for medium-sized devices (tablets) */
+@media (min-width: 768px) {
+  .benefits__grid {
+    grid-template-columns: repeat(3, 1fr); /* Arranges items into 3 columns */
+  }
+}
+
+/* Adjustments for small devices (portrait tablets and large phones) */
+@media (max-width: 767px) {
+  .benefits__grid {
+    grid-template-columns: repeat(2, 1fr); /* Arranges items into 2 columns */
+    gap: 15px; /* Adjusts the gap size */
+  }
+
+  .benefits__item {
+    padding: 15px; /* Adjusts padding */
+    font-size: 1rem; /* Adjusts font size */
+  }
+  
+  .benefits__item svg {
+    font-size: 20px; /* Adjusts icon size */
+  }
+}

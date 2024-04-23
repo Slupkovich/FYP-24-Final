@@ -1,0 +1,90 @@
+/* Main section styles */
+.intro-brain-section {
+    background-color: #ffffff; /* Sets a white background color */
+    padding: 100px 20px; /* Adds substantial padding for spacing */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    transition: all 0.3s ease; /* Smooth transitions for all properties */
+}
+
+/* Container for the intro content */
+.intro-brain {
+    width: 100%; /* Uses full available width */
+    max-width: 960px; /* Restricts maximum width for optimal reading */
+    padding: 0 40px; /* Horizontal padding */
+    text-align: center; /* Aligns text centrally */
+    margin: auto; /* Centers the container horizontally */
+    border-radius: 10px; /* Rounded corners */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for shadow and transformation */
+}
+
+/* Hover effect for the intro content container */
+.intro-brain:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Adds shadow for 3D effect */
+    transform: translateY(-5px); /* Moves the box slightly upwards */
+}
+
+/* Styles for the title within the intro section */
+.intro-brain__title {
+    font-size: 36px; /* Large font size for visibility */
+    font-weight: 600; /* Semi-bold font weight */
+    margin-bottom: 1rem; /* Space below the title */
+    color: #030F28; /* Dark blue color for text */
+    position: relative; /* Establishes positioning context */
+    display: inline-block; /* Allows for additional elements like pseudo-elements */
+}
+
+/* Pseudo-element for underlining the title */
+.intro-brain__title::after {
+    content: ''; /* Necessary for display */
+    display: block; /* Treats the line as a block for width manipulation */
+    width: 100%; /* Ensures the line spans the entire width of the title */
+    height: 3px; /* Sets the line thickness */
+    background-color: #5EC3E5; /* Bright blue color for emphasis */
+    margin-top: 8px; /* Space between title and underline */
+}
+
+/* Paragraph styles in the intro section */
+.intro-brain__text {
+    font-size: 1.2rem; /* Moderate font size for readability */
+    color: #030F28; /* Dark blue, matching the title */
+    margin-bottom: 16px; /* Space between paragraphs */
+    line-height: 1.6; /* Enhances readability */
+}
+
+/* List styling within the intro section */
+.intro-brain__list {
+    list-style: none; /* No bullet points */
+    padding-left: 0; /* Removes padding to align text properly */
+    text-align: center; /* Central alignment for consistency */
+    max-width: 80%; /* Limits width for readability */
+    margin: 0 auto; /* Centers the list horizontally */
+}
+
+/* Styles for list items */
+.intro-brain__list-item {
+    margin-bottom: 12px; /* Space between list items */
+    position: relative; /* Establishes positioning context */
+}
+
+/* Strong text within list items */
+.intro-brain__list-item--strong {
+    color: #000000; /* Black color for emphasis */
+    font-weight: bold; /* Bold text to highlight key terms */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
+    .intro-brain-section {
+        padding: 50px 20px; /* Reduced padding on smaller screens */
+    }
+
+    .intro-brain {
+        padding: 0 5%; /* Adjust padding for smaller screens */
+    }
+
+    .intro-brain__list {
+        text-align: center; /* Ensure list is centered on mobile devices */
+    }
+}

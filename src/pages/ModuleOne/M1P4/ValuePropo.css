@@ -1,0 +1,313 @@
+/* Styles for the full container of the Value Propositions component. */
+.vp-full-container {
+  width: 100%; /* Ensures the container spans the full width of its parent. */
+  border-top: 2px solid #ececec; /* Adds a light grey top border for visual separation. */
+  margin-bottom: 20px; /* Provides consistent spacing between the border and the content below it. */
+}
+
+/* Main container for the Value Propositions content, centered with specified maximum width. */
+.vp-container {
+  max-width: 1200px; /* Aligns the maximum width with other similar components for visual consistency. */
+  margin: 0 auto; /* Centers the container within its parent. */
+  padding: 50px 20px; /* Adds vertical padding for spacing within the container. */
+}
+  
+/* Styles for the main title of the Value Propositions component. */
+.vp-main-title {
+  font-size: 36px; /* Sets the font size to make the title prominent. */
+  color: #030F28; /* Dark blue colour for the title text for readability and theme consistency. */
+  text-align: center; /* Centers the title text. */
+  margin: 2rem 0; /* Adds space above and below the title for clear visual separation. */
+  font-weight: 600; /* Boldens the title text to stand out. */
+  position: relative; /* Enables positioning of pseudo-elements relative to the title. */
+  display: table; /* Allows the element to shrink to fit its content, aiding in centering. */
+  margin-left: auto; /* Centers the block element horizontally. */
+  margin-right: auto;
+}
+
+/* Adds an underline effect to the main title for visual emphasis. */
+.vp-main-title::after {
+  content: '';
+  height: 3px; /* Thickness of the underline. */
+  background: #4db2d6; /* Bright blue colour for the underline for a touch of colour. */
+  position: absolute; /* Positions the underline relative to the title's position. */
+  bottom: -10px; /* Positions the underline below the text. */
+  left: 0;
+  right: 0;
+  display: block; /* Makes the pseudo-element behave as a block for proper width calculation. */
+  margin-left: auto; /* Centers the underline. */
+  margin-right: auto;
+}
+
+/* Introductory section style within the Value Propositions component, including hover effects. */
+.vp-intro {
+  border-radius: 10px; /* Rounds the corners for a softer, more modern look. */
+  padding: 2rem; /* Internal padding for content spacing. */
+  margin-bottom: 2rem; /* Bottom margin for separation from subsequent content. */
+  text-align: center; /* Centers the text within the intro section. */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for the hover effect. */
+}
+
+/* Hover effects for the intro section, creating depth and interactivity. */
+.vp-intro:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Adds a shadow for a "lifting" visual effect. */
+  transform: translateY(-5px); /* Moves the section up slightly on hover. */
+}
+  
+/* Style for introductory titles, ensuring consistency in appearance across similar components. */
+.vp-intro-title {
+  font-size: 1.5rem; /* Sets a consistent font size for subtitles. */
+  color: #030F28; /* Dark blue text color for consistency with the main title. */
+  text-align: center; /* Centers the subtitle. */
+  font-weight: 600; /* Ensures the subtitle is bold for emphasis. */
+  margin-bottom: 1rem; /* Adds space below the subtitle for visual separation. */
+}
+  
+/* General styling for paragraphs and unordered lists within the intro section. */
+.vp-intro p,
+.vp-intro ul {
+  font-size: 1.2rem; /* Sets a readable font size for text. */
+  line-height: 1.7; /* Adjusts line height for readability. */
+  color: #4A4A4A; /* Sets the text color to a dark grey for contrast without harshness. */
+  display: inline-block; /* Allows block-level elements to align properly in the center. */
+  margin-bottom: 1rem; /* Adds spacing below paragraphs and lists for separation. */
+}
+  
+/* Styling adjustments for headers within the intro section for visual hierarchy. */
+.vp-intro h3 {
+  font-weight: 600; /* Bold text for heading prominence. */
+  color: #030F28; /* Dark blue for consistency with other text elements. */
+  margin-bottom: 0.5rem; /* Adds a small space below headings for separation. */
+}
+  
+/* Styles for unordered lists within the intro section, removing default list styling. */
+.vp-intro ul {
+  list-style: none; /* Removes bullet points for a cleaner look. */
+  padding-left: 0; /* Eliminates default padding. */
+}
+  
+/* Customises list items within the intro section for a polished, branded appearance. */
+.vp-intro li {
+  position: relative; /* Allows positioning of pseudo-elements relative to the list item. */
+  padding-left: 1.5rem; /* Adds space before the text to accommodate custom bullets. */
+  margin-bottom: 0.5rem; /* Separates list items for clarity. */
+  font-size: 1rem; /* Sets the font size for list text. */
+}
+  
+/* Custom bullet styling using a pseudo-element before each list item. */
+.vp-intro li::before {
+  content: '•'; /* Uses a bullet character for custom list bullets. */
+  font-size: 1.2rem; /* Slightly enlarges the bullet for visibility. */
+  color: #5EC3E5; /* Uses the accent color for the bullet for a pop of color. */
+  margin-right: 0.5rem; /* Spaces the bullet from the list text. */
+  position: relative; /* Adjusted to position relative for alignment. */
+  bottom: 0.3rem; /* Fine-tunes the bullet's vertical position to align with the text. */
+}
+
+/* Styles for the container that holds images related to the value propositions. */
+.vp-image-container {
+  text-align: center; /* Centers the images within the container. */
+  margin: 2rem 0; /* Adds vertical space above and below the container. */
+}
+
+/* Styles for the images within the value propositions. */
+.vp-image {
+  max-width: 100%; /* Ensures the image is responsive and does not overflow its container. */
+  height: auto; /* Maintains the aspect ratio of the image. */
+  border-radius: 10px; /* Rounds the corners of the image for a softer look. */
+}
+
+/* Styles for the tabs container. */
+.tabs {
+  margin-top: 20px; /* Adds space above the tabs for visual separation. */
+}
+
+/* Styles for the container that holds tab headers. */
+.tab-headers {
+  display: flex; /* Lays out the tab headers in a row. */
+  justify-content: center; /* Centers the tab headers within their container. */
+  position: relative; /* Enables absolute positioning of child elements like separators. */
+  gap: 4px; /* Adds space between individual tab headers. */
+  flex-wrap: nowrap; /* Prevents the tab headers from wrapping onto multiple lines. */
+}
+
+/* Styles for headings within the tab content areas. */
+.tab-content h2 {
+  text-align: center; /* Centers the headings. */
+  font-size: 1.5rem; /* Sets a consistent size for headings within tab content. */
+  color: #030F28; /* Dark blue colour for text consistency. */
+  margin-top: 1rem; /* Adds space above the heading. */
+  margin-bottom: 1rem; /* Adds space below the heading. */
+  font-weight: 600; /* Makes the heading text bold for emphasis. */
+}
+
+/* Styles for paragraphs within the tab content areas. */
+.tab-content p {
+  font-size: 1.2rem; /* Sets a readable size for paragraph text. */
+  line-height: 1.7; /* Adjusts line height for readability. */
+}
+
+/* Styles for strong (bold) text within the tab content, providing a colour distinction. */
+.tab-content strong {
+  color: #000000; /* Sets the colour of bold text to black for emphasis. */
+}
+
+/* Styles for individual tab buttons. */
+.tab-button {
+  flex: 1; /* Allows the buttons to evenly distribute space within their container. */
+  margin: 0 2px; /* Adds horizontal spacing between buttons. */
+  text-align: center; /* Centers the text within each button. */
+  padding: 10px 16px; /* Adds internal padding for better tap target size and aesthetics. */
+  border: 1px solid #5EC3E5; /* Adds a subtle border with the accent color. */
+  background-color: #fff; /* Sets the background colour to white for a clean look. */
+  cursor: pointer; /* Changes the cursor to indicate the buttons are clickable. */
+  font-size: 1rem; /* Sets the font size for the button text. */
+  font-weight: 600; /* Boldens the text for better readability. */
+  color: #030F28; /* Dark blue text for consistency with the theme. */
+  text-transform: uppercase; /* Capitalises button text for a more defined appearance. */
+  letter-spacing: 0.05em; /* Adds spacing between letters for improved legibility. */
+  transition: background-color 0.3s ease, margin-top 0.3s ease, padding-bottom 0.3s ease; /* Animates background colour, margin, and padding changes. */
+}
+
+/* Adjusts the margin for specific tab buttons to create visual separation. */
+.tab-button:nth-child(4) {
+  margin-left: 20px; /* Adds space to the left of the fourth tab button. */
+}
+
+.tab-button:nth-child(3) {
+  margin-right: 20px; /* Adds space to the right of the third tab button. */
+}
+
+/* Styles for the separator between tab headers. */
+.tab-headers::after {
+  content: '';
+  position: absolute; /* Positions the separator in relation to its parent container. */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Centers the separator. */
+  height: 4px; /* Sets the height (thickness) of the separator. */
+  width: 4px; /* Sets the width of the separator. */
+  background-color: #5EC3E5; /* Uses the accent colour for the separator. */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth. */
+  z-index: 1; /* Ensures the separator is above the tab headers. */
+}
+
+/* Styles for hover and active states of tab buttons for visual feedback. */
+.tab-button:hover:not(.active),
+.tab-button.active {
+  background-color: #f7f7f7; /* Light grey background on hover for non-active tabs, and a different shade for active tabs. */
+  margin-top: -3px; /* Slightly raises the button on hover for a lifted effect. */
+  padding-bottom: 13px; /* Adjusts padding to maintain button size during hover effect. */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Applies a more pronounced shadow on hover. */
+}
+
+/* Additional styles for the active tab button. */
+.tab-button.active {
+  border-bottom-color: #5EC3E5; /* Accent colour underline for the active tab. */
+  position: relative; /* Positions the active tab above the separator. */
+  z-index: 2; /* Ensures the active tab overlaps the separator. */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow for added depth. */
+}
+
+/* General styles for the content area of each tab. */
+.tab-content {
+  background: #fff; /* Sets a white background for content clarity. */
+  border-radius: 10px; /* Rounds the corners for a softer appearance. */
+  padding: 1rem; /* Adds internal spacing for content. */
+  margin-top: 1rem; /* Adds space above the content area for separation from tabs. */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animates shadow and lift effects on hover. */
+}
+
+/* Hover effect for the content area. */
+.tab-content:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Applies a deeper shadow for interactive feedback. */
+  transform: translateY(-5px); /* Lifts the content area slightly on hover. */
+}
+
+/* Styles to hide and show tab panels based on active state. */
+.tab-panel {
+  display: none; /* Hides inactive tab panels. */
+}
+
+.tab-panel.active {
+  display: block; /* Shows the active tab panel. */
+}
+
+/* Focus styles for accessibility, providing visual feedback when tab buttons are focused. */
+.tab-button:focus {
+  outline: 3px solid #5EC3E5; /* Draws a noticeable outline around the focused button. */
+  outline-offset: 2px; /* Adds space between the button and its focus outline. */
+}
+  
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  /* Adjust the flex-basis of tab buttons for better spacing and layout. */
+  .tab-button {
+    flex-basis: calc(33.33% - 10px); /* Arranges three items per row with some spacing. */
+    margin: 5px; /* Adjusts margin to ensure space between buttons. */
+    padding: 8px 0; /* Adjusts padding for better visual balance. */
+  }
+
+  /* Optionally adjust the font size for better readability on tablet devices. */
+  .tab-button {
+    font-size: 0.95rem; /* Slightly reduces font size for a more proportional appearance. */
+  }
+
+  /* Adjusts padding inside the tab content for a more compact layout. */
+  .tab-content {
+    padding: 0.9rem;
+  }
+
+  /* Adjustments for the separator, depending on design choice. */
+  .separator {
+    /* To keep the separator visible with adjusted spacing: */
+    margin: 0 15px;
+    /* To hide the separator: */
+    display: none;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Stacks tab headers vertically for smaller screens. */
+  .tab-headers {
+    flex-direction: column;
+  }
+  
+  /* Adjusts tab buttons for a full-width, column layout. */
+  .tab-button {
+    flex: none; /* Disables flex grow to keep the tabs from stretching. */
+    width: 100%; /* Ensures tabs take up the full width of their container. */
+    margin: 2px 0; /* Applies vertical spacing only. */
+  }
+  
+  /* Hides the separator in the column layout for a cleaner look. */
+  .tab-headers::after {
+    display: none;
+  }
+  
+  /* Reduces font size and adjusts padding for tabs to fit smaller screens better. */
+  .tab-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  /* Adjusts padding in the tab content area for space optimisation. */
+  .tab-content {
+    padding: 0.8rem;
+  }
+}
+
+/* Styles for even smaller screens, like small smartphones. */
+@media (max-width: 480px) {
+  /* Further reduces padding and font size for tabs to accommodate very small screens. */
+  .tab-button {
+    padding: 6px 10px;
+    font-size: 0.8rem; /* Decreases font size for compactness and readability. */
+  }
+
+  /* Reduces padding inside the tab content for a tighter, more focused layout. */
+  .tab-content {
+    padding: 0.6rem;
+  }
+}

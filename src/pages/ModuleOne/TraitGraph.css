@@ -1,0 +1,41 @@
+/* Styling for the overall success graph component */
+.success-graph {
+  background-color: #ffffff; /* Sets the background color to white for a clean look */
+  padding: 100px 20px; /* Provides ample padding around the content */
+  border-top: 2px solid #ececec; /* Adds a subtle grey line at the top for visual separation */
+}
+
+/* Container for the graph elements, ensuring alignment and presentation */
+.success-graph__container {
+  max-width: 600px; /* Limits the width to ensure content is well-contained */
+  margin: auto; /* Centers the container within its parent */
+  padding: 1rem; /* Adds padding around the inside of the container */
+  background-color: #ffffff; /* Reaffirms the background color for consistency */
+  border-radius: 8px; /* Softens the edges with rounded corners */
+}
+  
+/* Title styling for the graph, focused on centrality and color */
+.success-graph__title {
+  text-align: center; /* Ensures the title is centered */
+  color: #030F28; /* Sets the color to a dark blue for contrast and readability */
+  margin-bottom: 1rem; /* Adds space below the title */
+  position: relative; /* Enables positioning of pseudo-elements */
+}
+
+/* Decorative line beneath the title for emphasis and aesthetic continuity */
+.success-graph__title::after {
+  content: ''; /* Necessary for the pseudo-element to display */
+  display: block; /* Ensures the line is a block-level element, taking full width */
+  width: 100%; /* Full width to span underneath the title */
+  height: 3px; /* Defines the thickness of the line */
+  background-color: #5EC3E5; /* Sets the color to a bright sky blue for a pop of color */
+  margin-top: 0.5rem; /* Creates space between the title and the decorative line */
+}
+
+/* Styling for the source reference, ensuring legibility and placement */
+.success-graph__source-reference {
+  text-align: center; /* Centers the text */
+  margin-top: 1rem; /* Adds space above the source reference for clear separation */
+  font-size: 0.8rem; /* Sets a smaller font size for subtlety */
+  color: #030F28; /* Color is consistent with the title, maintaining a cohesive look */
+}

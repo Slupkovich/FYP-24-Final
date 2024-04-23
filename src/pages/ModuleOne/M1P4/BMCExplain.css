@@ -1,0 +1,104 @@
+/* General styles applied to each section within the BMCExplain component. */
+.bmc-detail-sec {
+  padding: 50px 20px; /* Adds vertical padding to each section for spacing. */
+}
+
+/* Specific style for the first section to differentiate it from others. */
+.first-section {
+  border-top: 2px solid #ececec; /* Adds a light grey top border to the first section. */
+}
+
+/* Styles for the container that holds the detail of each section. */
+.bmc-detail-viewer {
+  background: #ffffff; /* Sets a white background for contrast against the section background. */
+  border-radius: 10px; /* Applies rounded corners for a softer, modern appearance. */
+  padding: 2rem; /* Provides internal spacing for the content. */
+  margin: 2rem auto; /* Centers the viewer and adds vertical spacing outside it. */
+  max-width: 1200px; /* Restricts the maximum width to maintain readability. */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for the hover effects. */
+  text-align: center; /* Centers the text within the viewer. */
+}
+
+/* Enhances interactivity with a hover effect on the viewer container. */
+.bmc-detail-viewer:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Applies a shadow for depth. */
+  transform: translateY(-5px); /* Slightly lifts the viewer to indicate it's interactive. */
+}
+
+/* Style definitions for titles within each viewer. */
+.bmc-detail-title {
+  color: #030F28; /* Sets the text color to a dark blue for emphasis. */
+  margin: 0 auto 1rem; /* Centers the title and adds space below. */
+  font-weight: 600; /* Makes the title bold for prominence. */
+  line-height: 1.2; /* Adjusts line height for better readability. */
+  display: inline-block; /* Allows the title to only take up as much width as necessary. */
+  position: relative; /* Enables absolute positioning for pseudo-elements like the underline. */
+}
+
+/* Creates an underline effect for titles using a pseudo-element. */
+.bmc-detail-title::after {
+  content: '';
+  display: block;
+  height: 2px; /* Sets the thickness of the underline. */
+  background-color: #5EC3E5; /* Uses a light blue color for the underline for a pop of color. */
+  width: 100%; /* Ensures the underline spans the entire width of the title. */
+  position: absolute; /* Positions the underline directly below the title. */
+  bottom: -10px; /* Offsets the underline to sit just below the text. */
+  left: 0;
+  border-radius: 1px; /* Slightly rounds the corners of the underline for a refined look. */
+}
+
+/* Applies styles to individual sections within the viewer. */
+.bmc-detail-section {
+  margin-bottom: 1.5rem; /* Adds spacing between consecutive sections. */
+}
+
+/* Defines the appearance of paragraphs within each section. */
+.bmc-detail-description {
+  font-size: 1.2rem; /* Sets an appropriate font size for readability. */
+  line-height: 1.7; /* Adjusts line height for easier reading. */
+  color: #030F28; /* Dark blue color for text to maintain consistency. */
+  margin-bottom: 1rem; /* Adds spacing below each paragraph. */
+}
+
+/* Styles for unordered lists within sections, removing default list styling. */
+.bmc-detail-list {
+  list-style: none; /* Removes bullet points. */
+  padding-left: 0; /* Removes default padding. */
+  margin-top: 1rem; /* Adds space above the list. */
+  text-align: left; /* Aligns list text to the left for a traditional list appearance. */
+}
+
+.bmc-detail-description, .bmc-detail-list {
+  display: inline-block; /* Center these block-level elements */
+  width: 100%; /* Set to 100% or another value that fits my design */
+}
+
+/* Customises the appearance of list items within the viewer. */
+.bmc-detail-list-item {
+  color: #030F28; /* Maintains the dark blue text color. */
+  background-color: #ffffff; /* Sets a white background for a clean look. */
+  padding: 0.75rem 1rem; /* Adds internal padding for space around the text. */
+  border-left: 3px solid #5EC3E5; /* Introduces a bright blue left border for visual interest. */
+  margin-bottom: 0.5rem; /* Separates each list item. */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animates background color and position changes on hover. */
+}
+
+/* Adds a hover effect to list items, changing the background color and shifting them to the right. */
+.bmc-detail-list-item:hover {
+  background-color: #5EC3E5; /* Changes the background to light blue on hover. */
+  transform: translateX(10px); /* Moves the item to the right for an interactive effect. */
+}
+
+/* Responsive styles for larger screens, adjusting the layout of the viewer containers. */
+@media (min-width: 768px) {
+  .bmc-detail-viewer {
+    flex: 1 1 calc(50% - 2rem); /* Adjusts for a 2-column layout. */
+  }
+}
+
+@media (min-width: 1024px) {
+  .bmc-detail-viewer {
+    flex: 1 1 calc(33.333% - 2rem); /* Adjusts for a 3-column layout at larger viewports. */
+  }
+}

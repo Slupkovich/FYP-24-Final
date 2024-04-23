@@ -1,0 +1,164 @@
+/* Styles the overall mind-mapping section with a clean background and consistent padding */
+.mind-mapping-section {
+  background-color: #ffffff; /* Sets a clean, white background */
+  padding: 100px 20px; /* Provides top and bottom padding, with narrower side padding for spacing */
+  border-top: 2px solid #ececec; /* Adds a subtle top border for visual separation */
+  display: flex; /* Utilizes flexbox for layout */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  transition: all 0.3s ease; /* Allows smooth transitions for all properties */
+}
+
+/* Container for the specific mind-mapping content, styled for readability and interactivity */
+.mind-mapping-container {
+  width: 100%; /* Ensures the container spans the full width of its parent */
+  max-width: 960px; /* Caps the maximum width to maintain readability */
+  padding: 0 40px; /* Provides consistent horizontal padding */
+  text-align: center; /* Centers all text within the container */
+  margin: auto; /* Centers the container horizontally within its parent */
+  border-radius: 10px; /* Rounds the corners for a softer visual appearance */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for shadow and position changes */
+}
+
+/* Adds a shadow and slight upward movement on hover for a dynamic, interactive effect */
+.mind-mapping-container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    transform: translateY(-5px); /* Moves the container up slightly to indicate interactivity */
+}
+
+/* Styling for the main title within the mind-mapping section */
+.mind-mapping__title {
+  font-size: 36px; /* Large font size for clear visibility */
+  margin: 1rem 0; /* Uniform margin above and below the title */
+  color: #030F28; /* Dark, rich blue for contrast against the light background */
+  position: relative; /* Establishes positioning context for pseudo-elements */
+  display: inline-block; /* Ensures the element does not stretch beyond its content width */
+}
+
+/* Underline effect for the title using a pseudo-element */
+.mind-mapping__title::after {
+  content: ''; /* Necessary for the pseudo-element to display */
+  display: block; /* Treats the line as a block element */
+  width: 100%; /* Ensures the underline spans the entire width of the title */
+  height: 3px; /* Specifies the thickness of the underline */
+  background: #5EC3E5; /* Bright blue to match branding and provide visual interest */
+  margin-top: 8px; /* Space between the title and the underline */
+  position: absolute; /* Positions the underline relative to the title */
+  left: 0;
+  bottom: -10px; /* Positions the underline just below the title */
+}
+
+/* Additional styles for subtitles within the section */
+.mind-mapping__sub-title {
+  color: #5EC3E5; /* Matches the title underline for cohesive design */
+  font-size: 1.5rem; /* Slightly smaller than the main title but still prominent */
+  margin-top: 2rem; /* Space above the subtitle for clear separation */
+  margin-bottom: 1rem; /* Space below the subtitle to lead into subsequent content */
+}
+
+/* Paragraph styles within the mind-mapping container for consistent readability */
+.mind-mapping-container p {
+  font-size: 1.2rem; /* Slightly larger than default for easy reading */
+}
+
+/* Styles for an ordered list showing steps in the mind-mapping process */
+.mind-mapping__steps {
+  list-style-type: none; /* Removes default list styling */
+  padding: 0; /* No padding to align with the container edges */
+  margin: 0 auto; /* Centers the list horizontally */
+  max-width: 80%; /* Restricts list width to maintain layout consistency */
+}
+
+/* Styles for individual list items in the steps list */
+.mind-mapping__steps li {
+  counter-increment: step-counter; /* Increments a CSS counter for each list item */
+  margin-bottom: 1rem; /* Spacing between list items */
+  position: relative; /* Allows absolute positioning of child elements like the counter */
+  padding-left: 2.5rem; /* Space for the step number */
+  font-size: 1rem; /* Standard font size for readability */
+  line-height: 1.6; /* Enhances readability by spacing lines apart */
+}
+
+/* Pseudo-element to display step numbers */
+.mind-mapping__steps li::before {
+  content: counter(step-counter); /* Displays the step number */
+  position: absolute; /* Positions number within the list item */
+  left: 0; /* Aligns number to the left edge of the list item */
+  top: 0; /* Aligns number to the top of the list item */
+  height: 2rem; /* Fixed height for the circle */
+  width: 2rem; /* Fixed width for the circle */
+  line-height: 2rem; /* Centers text vertically within the circle */
+  text-align: center; /* Centers text horizontally */
+  border-radius: 50%; /* Makes the background a circle */
+  background: #5EC3E5; /* Light blue background for visibility */
+  color: #ffffff; /* White text for contrast */
+  font-weight: bold; /* Bold text to make the numbers stand out */
+}
+
+/* Container for videos in the mind-mapping section */
+.mind-mapping__video-container {
+  background: #ffffff; /* White background for clarity */
+  border-radius: 8px; /* Rounded corners for a softer visual appearance */
+  overflow: hidden; /* Hides anything outside the border radius */
+  margin-top: 2rem; /* Spacing above the container */
+  transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+/* Styles for the video iframe */
+.mind-mapping__video {
+  width: 100%; /* Ensures the video fills the container */
+  height: 315px; /* Standard height to maintain aspect ratio */
+  border: none; /* Removes the default border around iframes */
+}
+
+/* Container for key points associated with the video */
+.mind-mapping__video-key-points {
+  list-style: none; /* Removes default bullet points */
+  padding: 20px; /* Padding inside the container for spacing */
+  margin: 0; /* No external margins to fit tightly within its container */
+  border-bottom-left-radius: 8px; /* Rounds the bottom-left corner */
+  border-bottom-right-radius: 8px; /* Rounds the bottom-right corner */
+  text-align: left; /* Aligns the text to the left */
+}
+
+/* Individual items in the video key points list */
+.mind-mapping__video-point-item {
+  color: #030F28; /* Dark blue text for readability */
+  background-color: #ffffff; /* White background for clarity */
+  padding: 0.75rem 1rem; /* Padding for visual comfort and spacing */
+  border-left: 3px solid #5EC3E5; /* Decorative left border in light blue */
+  margin-bottom: 0.5rem; /* Spacing between each list item */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for interactive effects */
+}
+
+/* Hover effect for list items, adding interaction and visual feedback */
+.mind-mapping__video-point-item:hover {
+  background-color: #5EC3E5; /* Changes background to light blue on hover */
+  transform: translateX(10px); /* Moves the item slightly to the right */
+}
+
+/* Media queries for responsive design adjustments */
+@media (max-width: 768px) {
+  .mind-mapping-section {
+    padding: 50px 20px; /* Adjusts padding for smaller screens */
+  }
+
+  .mind-mapping-container {
+    margin: 1rem; /* Adjusts margins for consistent spacing */
+    padding: 0 5%; /* Adjusts horizontal padding for screen size */
+  }
+
+  .mind-mapping__video-container {
+    margin-top: 1rem; /* Reduces top margin on smaller screens */
+  }
+
+  .mind-mapping__video {
+    height: auto; /* Auto height for flexibility */
+    aspect-ratio: 16 / 9; /* Maintains video aspect ratio */
+    width: 100%; /* Full width for responsiveness */
+  }
+
+  .mind-mapping__video-key-points {
+    padding: 1rem; /* Adjusts padding for better spacing on mobile */
+  }
+}

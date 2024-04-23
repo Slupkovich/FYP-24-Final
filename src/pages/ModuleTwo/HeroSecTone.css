@@ -1,0 +1,46 @@
+.heroTwo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  background-image: url('~/public/M2 HS Photo.jpeg'); /* Update with your image path */
+  background-size: cover;
+  background-position: center;
+  color: #ffffff; /* Assuming white text for contrast */
+  text-align: center;
+  padding: 0 20px;
+}
+
+.scroll-indicators {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #ffffff; /* Arrow color */
+  cursor: default; /* Changed from none to default */
+  animation: bounce 2s infinite;
+}
+
+.left {
+  margin-left: 20px;
+}
+
+.right {
+  margin-right: 20px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-20px);}
+  60% {transform: translateY(-10px);}
+}

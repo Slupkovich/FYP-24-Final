@@ -1,0 +1,75 @@
+/* Main section styling to ensure full screen height and center content */
+.under-construction-sec {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    height: 100vh; /* Full viewport height */
+    color: #ffffff; /* White text color for contrast */
+    background: #030F28; /* Dark blue background */
+}
+
+/* Container for text content, centered with a maximum width */
+.under-contruction__container {
+    text-align: center;
+    max-width: 600px;
+    padding: 0 20px; /* Padding for responsiveness on smaller screens */
+}
+
+/* Styling for the page title */
+.under-contruction__title {
+    font-size: 3rem; /* Large font size for impact */
+    font-weight: 600; /* Semi-bold for clarity */
+    margin: 0 0 20px; /* Space below the title */
+    color: #5EC3E5; /* Blue color for brand consistency */
+    letter-spacing: -0.02em; /* Slightly tighter letter-spacing for a modern look */
+}
+
+/* Decorative underline accent for the title */
+.under-contruction__title::after {
+    content: '';
+    display: block;
+    width: 60px; /* Width of the underline */
+    height: 4px; /* Thickness of the underline */
+    background: #4db2d6; /* Lighter blue than the text */
+    margin: 20px auto 30px; /* Centering and spacing of the underline */
+}
+
+/* Styling for the descriptive paragraph */
+.under-contruction__description p {
+    font-size: 1.125rem; /* Readable font size */
+    line-height: 1.7; /* Line height for better readability */
+    opacity: 0.9; /* Slightly faded text for stylistic effect */
+    max-width: 500px; /* Maximum width for optimal reading line length */
+    margin: 0 auto 40px; /* Centered horizontally with space below */
+}
+
+/* Call-to-action button styling */
+.button-cta {
+    background-color: #5EC3E5; /* Background color that matches the title */
+    color: #ffffff; /* White text for readability */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px; /* Rounded corners for a softer look */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em; /* Slight spacing between letters */
+    margin-top: 20px; /* Space from the last paragraph */
+}
+
+/* Hover effect for the button */
+.button-cta:hover {
+    background-color: #4db2d6; /* A slightly darker shade for interactive feedback */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .under-contruction__title {
+        font-size: 2rem; /* Smaller font size on smaller devices */
+    }
+
+    .under-contruction__description p {
+        font-size: 1rem; /* Adjust font size for readability on mobile */
+    }
+}

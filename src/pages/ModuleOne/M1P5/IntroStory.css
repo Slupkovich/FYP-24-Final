@@ -1,0 +1,27 @@
+/* StorytellingModule.css */
+.storytelling-module {
+    background: linear-gradient(to bottom, #030F28, #020C22);
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .module-title {
+    color: #5EC3E5;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .module-info h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .module-info p {
+    color: #ffffff;
+    line-height: 1.6;
+  }
+  

@@ -1,0 +1,113 @@
+/* Base styling for the footer */
+.footer {
+  background: #030F28; /* Dark blue background */
+  color: #fff; /* White text color for contrast */
+  padding: 2rem 1rem; /* Padding around the footer content */
+  border-top: 2px solid #ececec; /* Light border on the top edge for subtle separation */
+}
+
+/* Styling for the main content area within the footer */
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Central alignment of all items */
+  text-align: center; /* Text centered */
+  margin-bottom: 2rem; /* Spacing at the bottom */
+}
+
+/* Styling for the logo within the footer */
+.footer__logo {
+  width: auto; /* Auto width to maintain aspect ratio */
+  height: 13rem; /* Fixed height for consistency */
+  margin-bottom: 1rem; /* Space below the logo */
+}
+
+/* Styling for descriptive text within the footer */
+.footer__text {
+  margin-bottom: 2rem; /* Space below the text */
+  font-size: 1.1rem; /* Slightly larger font size for readability */
+}
+
+/* Container for navigation links, enabling responsive wrap */
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centering navigation links */
+}
+
+/* Base styling for each navigation link */
+.footer__nav-link {
+  display: flex;
+  align-items: center; /* Vertical alignment of icon and text */
+  color: #ffffff;
+  text-decoration: none; /* No underline to clean appearance */
+  padding: 8px 16px;
+  border-radius: 4px; /* Rounded corners for a softer look */
+  margin: 0.5rem; /* Margins for spacing around links */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition for hover states */
+}
+
+/* Styling for an active navigation link */
+.footer__nav-link--active {
+  color: #5EC3E5; /* Bright sky blue for the active link */
+  background-color: transparent;
+  border-bottom: 2px solid #5EC3E5; /* Underline effect for active state */
+  padding-bottom: 6px;
+}
+
+/* Custom focus style for active navigation link */
+.footer__nav-link--active {
+  outline: 3px solid #030F28; /* Customise focus outline to match the design more subtly */
+}
+
+/* Styling for icons within navigation links */
+.footer__nav-link img.footer__icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 0.5rem; /* Space between icon and text */
+}
+
+/* Hover effect for navigation links */
+.footer__nav-link:hover {
+  color: #5EC3E5; /* Changes text color on hover */
+}
+
+/* Styling for the lower part of the footer, containing copyright and contact info */
+.footer__info {
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border for separation */
+  padding-top: 1rem;
+  text-align: center; /* Center alignment of text */
+}
+
+/* Styling for the email link */
+.footer__email {
+  color: #5EC3E5; /* Bright sky blue for visibility and design consistency */
+  text-decoration: none; /* No underline initially */
+  transition: text-decoration 0.3s; /* Smooth transition for underline */
+}
+
+/* Hover effect for the email link */
+.footer__email:hover {
+  text-decoration: underline; /* Underline on hover for emphasis */
+}
+
+/* Responsive design adjustments for smaller screens */
+@media (max-width: 768px) {
+  .footer__logo {
+    width: 13rem; /* Adjust width for smaller screens */
+  }
+
+  .footer__nav-link {
+    padding: 6px 12px; /* Smaller padding for compact layout */
+    font-size: 1rem; /* Smaller font size to fit compact spaces */
+  }
+
+  .footer__nav-link img.footer__icon {
+    margin-bottom: 0.5rem; /* Adjust spacing for vertical layout on small screens */
+  }
+
+  .footer__info {
+    flex-direction: column;
+    align-items: center; /* Stack elements vertically */
+  }
+}

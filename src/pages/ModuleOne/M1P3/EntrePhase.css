@@ -1,0 +1,88 @@
+/* Main container for the entrepreneurship phase, styled to center content and provide a clean background */
+.ep-container {
+  background-color: #ffffff; /* White background for clarity */
+  padding: 100px 0px; /* Uniform vertical padding */
+  border-top: 2px solid #ececec; /* Light grey border for a subtle top separation */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease; /* Smooth transitions for changes */
+}
+
+/* Styling for the main title within the entrepreneurship phase section */
+.ep-phase__title {
+  font-size: 2.5rem; /* Large font size for clear visibility */
+  margin-bottom: 32px; /* Space below the title */
+  padding-bottom: 10px; /* Padding below the text */
+  position: relative;
+  text-align: center; /* Centers the title text */
+}
+
+/* Underline effect for the title using a pseudo-element */
+.ep-phase__title::after {
+  content: '';
+  display: block;
+  height: 2px; /* Subtle height for an underline */
+  background-color: #5EC3E5; /* Bright blue colour for emphasis */
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -10px; /* Positioned just below the text */
+}
+
+/* Container for images, using grid layout for responsiveness and alignment */
+.ep-phase__images-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible grid columns */
+  gap: 40px; /* Spacing between grid items */
+  width: 100%;
+  max-width: 1100px; /* Maximum width to control layout scale */
+}
+
+/* Individual image wrappers within the phase, providing structured and styled containers */
+.ep-phase__image-wrapper {
+  background: #ffffff; /* White background to match the section */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Padding around the content within the wrapper */
+  text-align: left; /* Aligns the text to the left */
+}
+
+/* Styling for image titles within each wrapper, center-aligned */
+.ep-phase__image-title {
+  font-size: 1.6rem; /* Moderately large font size for readability */
+  color: #030F28; /* Dark blue for contrast */
+  margin-bottom: 16px; /* Space below the title */
+  text-align: center; /* Center alignment for the title */
+}
+
+/* Styling for images to ensure they are responsive and visually appealing */
+.ep-phase__image-wrapper img {
+  max-width: 100%; /* Ensures images are not larger than their containers */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Blocks level, necessary for margin handling */
+  margin: 0 auto; /* Centers image horizontally */
+  border-radius: 4px; /* Slightly rounded corners for images */
+}
+
+/* Media queries for tablet devices */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ep-container {
+    padding: 60px 20px; /* Adjusted padding for different screen sizes */
+  }
+
+  .ep-phase__images-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+  }
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 767px) {
+  .ep-container {
+    padding: 40px 10px; /* Reduced padding for smaller screens */
+  }
+
+  .ep-phase__images-container {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+  }
+}

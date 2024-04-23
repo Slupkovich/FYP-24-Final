@@ -1,0 +1,128 @@
+/* Styles for the main container of the entrepreneurship introduction section. */
+.entrepreneurship-intro-section {
+  text-align: center; /* Centralises text alignment for all child elements */
+  background: #ffffff;
+  padding: 100px 40px; /* Padding for inner spacing */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
+}
+
+/* Styles for the heading of the intro section. */
+.entrepreneurship-intro-header h1 {
+  color: #030F28; /* Dark text color for consistency */
+  font-weight: 600;
+  margin-bottom: 1rem; /* Bottom margin to provide space for the underline */
+  position: relative; /* To position the pseudo-element */
+  display: inline-block; /* To allow the pseudo-element to align correctly */
+  text-shadow: none; /* Assuming we don't want text shadow for consistency */
+}
+
+.entrepreneurship-intro-header h1::after {
+  content: '';
+  display: block;
+  width: 100%; /* Ensuring the line spans the width of the title */
+  height: 3px; /* Height of the line */
+  background-color: #5EC3E5; /* Bright sky blue color for the line */
+  margin-top: 8px; /* Space between the title and the line */
+}
+
+/* Styles for the introductory paragraph. */
+.entrepreneurship-intro-header p {
+  font-size: 1.2rem; /* Slightly larger font size for clarity */
+  max-width: 80%; /* Restrains paragraph width for optimal line length */
+  margin: 0 auto; /* Centres paragraph within its container */
+  line-height: 1.6; /* Line height for better text flow and readability */
+}
+
+.entrepreneurship-characteristics h3 {
+  color:#5EC3E5;
+  margin-top: 50px;
+  margin-bottom: 15px;
+
+}
+  
+/* Grid layout for the characteristics of entrepreneurs. */
+.entrepreneurship-characteristics-grid {
+  display: grid; /* Establishes a grid layout */
+  grid-template-columns: repeat(4, 1fr); /* Creates four equal-width columns */
+  gap: 20px; /* Space between grid items */
+  margin-bottom: 40px; /* Space below the entire grid */
+}
+  
+/* Individual characteristic item styling. */
+.entrepreneurship-characteristic {
+  background: #030F28; /* Dark background for individual items */
+  color: #ffffff; /* Text colour set to white for readability */
+  padding: 20px; /* Padding inside each grid item */
+  border-radius: 10px; /* Rounded corners for aesthetic appeal */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Stacks items vertically */
+  justify-content: center; /* Vertically centres items within the container */
+  height: 150px; /* Fixed height for uniformity */ 
+  transition: transform 0.3s ease-in-out;
+}
+
+.entrepreneurship-characteristic:hover {
+  transform: translateY(-10px);
+}
+
+/* Style for FontAwesome icons within the characteristic items */
+.entrepreneurship-characteristic svg 
+ { /* Styled-component */
+  color: #5EC3E5; /* Sets the icon color */
+  margin-bottom: 10px; /* Adds space between the icon and text */
+  font-size: 24px; /* Adjust icon size */
+}
+
+/* Headings within the failure perspective and avoiding pitfalls sections. */
+.entrepreneurship-failure-perspective h3,
+.entrepreneurship-avoiding-pitfalls h3 {
+  color: #030F28; /* Dark color for the headings */
+  position: relative; /* To position the pseudo-element */
+  display: inline-block; /* To allow the pseudo-element to align correctly */
+  margin-bottom: 16px; /* Space for the line */
+}
+
+/* Line under h3 elements */
+.entrepreneurship-failure-perspective h3::after,
+.entrepreneurship-avoiding-pitfalls h3::after {
+  content: '';
+  display: block;
+  width: 100%; /* Ensuring the line spans the width of the title */
+  height: 3px; /* Height of the line */
+  background-color: #5EC3E5; /* Color of the line */
+  margin-top: 8px; /* Space between the title and the line */
+}
+
+.entrepreneurship-failure-perspective{
+  margin-bottom: 50px;
+}
+  
+/* Unordered list styles within the pitfalls section. */
+.entrepreneurship-avoiding-pitfalls ul {
+  list-style-type: none; /* Removes default list bullets */
+  padding: 0; /* Resets padding */
+  margin: 0 auto; /* Centres the list horizontally */
+  display: table; /* Allows the list to behave like a table for centre alignment */
+}
+  
+/* List item styles within the pitfalls section. */
+.entrepreneurship-avoiding-pitfalls li {
+  text-align: center; /* Ensures text within list items is centred */
+}
+  
+/* Custom bullet styling for list items. */
+.entrepreneurship-avoiding-pitfalls li::before {
+  content: '• '; /* Custom bullet character */
+  color: #5EC3E5; /* Bullet colour matches the section headings for consistency */
+  font-size: 20px; /* Enlarged size for the bullet for visibility */
+  margin-right: 5px; /* Space between the bullet and list item text */
+  display: inline-block; /* Ensures bullet is inline with text */
+}
+  
+/* Responsive styling for grid layout on medium-sized devices. */
+@media (max-width: 992px) {
+  .entrepreneurship-characteristics-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjusts to two columns */
+  }
+}
+  

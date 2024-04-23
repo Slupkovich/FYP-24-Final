@@ -1,0 +1,126 @@
+.contact-me-section {
+    background-color: #ffffff; /* I've chosen a light background to keep the section bright and welcoming */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center alignment for items to ensure visual balance */
+}
+
+.contact-title {
+    color: #030F28; /* Dark Blue for the title "Contact" to contrast against the light background */
+    font-size: 36px; /* Font size increased for prominence */
+    margin-bottom: 10px; /* Margin adjustment for spacing below the title */
+    font-weight: 600; /* Bold font weight for better readability */
+    position: relative; /* Relative positioning to facilitate pseudo-element positioning */
+}
+
+.contact-title::after {
+    content: '';
+    display: block;
+    width: 100%; /* Ensures the underline spans the full width of the title */
+    height: 3px; /* Consistent line thickness for the underline */
+    background: #5EC3E5; /* A bright sky blue that matches other elements */
+    margin-top: 8px;
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Positions the underline just below the title */
+}
+
+.contact-title .me {
+    color: #5EC3E5; /* Bright Sky Blue for "Me" */
+}
+
+.contact-description {
+    margin-top: 10px;
+    color: #030F28; /* Dark blue for coherence with the title */
+    margin-bottom: 20px;
+    text-align: left; /* Left alignment for a standard flow of text */
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between; /* Space items effectively for a balanced layout */
+    align-items: flex-start; /* Align items to the top for a clean start line */
+    max-width: 1200px; /* Max width controlled for better alignment across larger screens */
+    width: 100%;
+}
+
+.contact-form {
+    margin-top: 50px;
+    width: 48%; /* Adjusted width for balance with the image section */
+    display: flex;
+    flex-direction: column; /* Stacking form elements vertically */
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between; /* Space inputs evenly in the row */
+    width: 100%; /* Full width to utilize space effectively */
+}
+
+.input-row input[type="text"],
+.input-row input[type="email"] {
+    width: 48%; /* Each input takes roughly half the row */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #5EC3E5; /* Borders in bright sky blue to maintain theme */
+    border-radius: 20px; /* Rounded corners for a softer aesthetic */
+}
+
+.contact-form input[type="text"]:not(.input-row input[type="text"]),
+.contact-form textarea {
+    width: 100%; /* Full width for inputs outside the .input-row */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #5EC3E5;
+    border-radius: 20px;
+}
+
+.contact-form button {
+    background-color: #5EC3E5; /* Buttons in bright sky blue to stand out */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; /* Rounded button edges for a consistent look */
+    cursor: pointer; /* Cursor change to indicate clickability */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    width: 100%; /* Full width to match input fields */
+}
+
+.contact-form button:hover {
+    background-color: #4db2d6; /* Slightly darker blue on hover for visual feedback */
+}
+
+.contact-image {
+    width: 40%; /* Adjusted width for visual balance with the form */
+    margin-left: 5%; /* Space between image and form reduced for cohesion */
+    max-width: 400px; /* Max width to control image scaling */
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Rounded corners to echo other elements */
+}
+
+/* Responsive adjustments for better mobile viewing */
+@media (max-width: 960px) {
+
+    .contact-title, .contact-description {
+        text-align: center; /* Centering text for mobile readability */
+    }
+    
+    .contact-content {
+        flex-direction: column-reverse; /* Stacking image above the form on smaller screens */
+        align-items: center; /* Center align the stacked items for uniformity */
+    }
+
+    .contact-form, .contact-image {
+        width: 100%; /* Full width utilization on smaller screens */
+    }
+
+    .contact-image {
+        margin-bottom: 20px; /* Space added between the image and form for clarity */
+        margin-left: 0; /* Resetting left margin on smaller screens */
+    }
+}
